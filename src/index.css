@@ -1,0 +1,48 @@
+:root {
+  line-height: 1.5;
+  --primary: #000000;
+  --red-font-color: #F94C35;
+  --light-font-color: #FFFFFF;
+}
+
+html, body {
+  background-color: var(--primary);
+  margin: 0;
+  height: 10000px;
+}
+
+.helper {
+
+  background-color: aqua;
+}
+
+
+.banner {
+  z-index: 1;
+  /* The image used */
+  background-image: url("/fuji.jpg");
+
+  /* Full height */
+  height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* The text container */
+.banner-text {
+  position: absolute; /* Position it relative to the banner */
+  margin-left: 15vw;
+  color: white; /* Text color */
+  font-size: 2rem; /* Adjust text size */
+  text-align: left; /* Center the text */
+  z-index: 1; /* Ensure it’s above the background */
+}
+
+.together {
+  display: flex; /* Arrange child elements in a row */
+  justify-content: center; /* Center the text horizontally */
+  align-items: center; /* Center the text vertically */
+}
