@@ -8,41 +8,108 @@
 html, body {
   background-color: var(--primary);
   margin: 0;
-  height: 10000px;
 }
 
-.helper {
-
-  background-color: aqua;
-}
-
-
-.banner {
-  z-index: 1;
-  /* The image used */
-  background-image: url("/fuji.jpg");
-
-  /* Full height */
+main {
   height: 100vh;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
 }
 
-/* The text container */
-.banner-text {
-  position: absolute; /* Position it relative to the banner */
-  margin-left: 15vw;
-  color: white; /* Text color */
-  font-size: 2rem; /* Adjust text size */
-  text-align: left; /* Center the text */
-  z-index: 1; /* Ensure it’s above the background */
+section {
+  transform-style: preserve-3d;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light-font-color);
+  z-index: -2;
 }
 
-.together {
-  display: flex; /* Arrange child elements in a row */
-  justify-content: center; /* Center the text horizontally */
-  align-items: center; /* Center the text vertically */
+
+.page {
+  padding-left: 15vw;
+  padding-right: 10vw;
+  padding-top: 10vh;
+  background-color: #000000;
+  z-index: 999;
+
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow items to wrap when they don't fit */
+  justify-content: center; /* Center items horizontally */
+  align-items: flex-start; /* Align items at the top of the row */
+  gap: 40px; /* Add spacing between items */
+}
+
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.52); /* Creates the parallax effect */
+  background-size: cover; /* Ensures the image covers the area */
+  background-position: center; /* Centers the image */
+  z-index: -3; /* Places it behind other content */
+}
+
+
+
+.bg::after {
+  background-image: url("./fuji.jpg"); /* Adds the background image */
+  background-size: cover; /* Ensures it scales to cover the area */
+  background-position: center; /* Centers the image */
+}
+
+
+/* Image Gallery */
+.image-gallery {
+  display: flex; /* Arrange items horizontally */
+  justify-content: center; /* Center the images in the gallery */
+  gap: 20px; /* Add space between the images */
+  padding: 50px 20px; /* Add padding around the gallery */
+  position: relative; /* To allow the parallax to work within the gallery */
+}
+
+.image-card {
+  position: relative; /* For positioning the ::after pseudo-element */
+  width: 400px; /* Fixed width for all image cards */
+  aspect-ratio: 2 / 3; /* Set the aspect ratio (width:height = 2:3) */
+  overflow: hidden; /* Crop overflowing parts of the image */
+  border-radius: 5px; /* Optional: Rounded corners */
+  background-color: #fff; /* Optional background color */
+  background-size: cover; /* Ensures the background image covers the area */
+  background-position: center; /* Centers the background image */
+  background-attachment: fixed; /* Creates the parallax effect */
+  z-index: 1; /* Ensure it's above other content */
+}
+
+/* Ensure the image stays in front */
+.image-card img {
+  position: relative; /* Ensures the image stays in front of the background */
+  width: 100%; /* Ensure the image spans the entire width */
+  height: 100%; /* Ensure the image spans the entire height */
+  object-fit: cover; /* Crops the image to fit within the container */
+  object-position: center; /* Center the image inside the container */
+  display: block;
+}
+
+/* Add background image for each card */
+.image-card:nth-child(1) {
+  background-image: url('tokyo-bay.jpg');
+}
+.image-card:nth-child(2) {
+  background-image: url('another-image.jpg');
+}
+
+@media screen and (min-width: 768px) {
+  section h1 {
+    font-size: 8rem;
+  }
+  .parallax h1 {
+    font-size: 4rem;
+  }
 }
