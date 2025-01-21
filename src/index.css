@@ -1,6 +1,7 @@
 :root {
   line-height: 1.5;
   --primary: #000000;
+  --secondary: #1f1f1f;
   --red-font-color: #F94C35;
   --light-font-color: #FFFFFF;
 }
@@ -19,6 +20,7 @@ main {
   perspective: 2px;
 }
 
+/* Parallax stuff */
 section {
   transform-style: preserve-3d;
   position: relative;
@@ -29,28 +31,6 @@ section {
   color: var(--light-font-color);
   z-index: -2;
 }
-
-.test {
-  height: fit-content;
-  padding-left: 15vw;
-  bottom: 67vh;
-  position: absolute;
-  z-index: 4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-.test h1 {
-  font-size: 15vh;
-  color: var(--light-font-color);
-}
-
-.test h2 {
-  font-size: 5vh;
-  color: var(--red-font-color);
-}
-
 .parallax::after {
   content: " ";
   position: absolute;
@@ -63,10 +43,9 @@ section {
   background-position: center; /* Centers the image */
   z-index: -3; /* Places it behind other content */
 }
-
-
 .bg::after {
   background-image: url("../public/fuji.jpg"); /* Adds the background image */
+  opacity: 60%;
   background-size: cover; /* Ensures it scales to cover the area */
   background-position: center; /* Centers the image */
 }
@@ -76,20 +55,88 @@ section {
   background-position: center; /* Centers the image */
 }
 
+
+/* Page css */
 .page {
-  padding: 10vw;
-  background-color: #000000;
+  padding: 5vw;
+  padding-left: 12vw;
+  background-color: var(--primary);
   z-index: 2;
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 80px;
+  gap: 60px;
+}
+
+.container {
+  background-color: var(--primary);
+  display: flex; /* Center the bento box vertically and horizontally */
+  justify-content: right;
+  align-items: center;
+}
+
+.bento-box {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 4 equal columns */
+  grid-template-rows: repeat(2, 1fr);  /* Adjust rows for different heights */
+  gap: 10px;
+  width: 100vw;
+  padding: 10px;
+  background-color: var(--primary);
+}
+
+.item {
+  color: var(--light-font-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.large {
+  aspect-ratio: 1/1;
+  grid-column: span 2; /* Spans 2 columns */
+  grid-row: span 2;    /* Spans 2 rows */
+  background: var(--secondary);
+  font-size: xx-large;
+}
+
+.long {
+  grid-column: span 1; /* Spans 1 columns */
+  grid-row: span 2;    /* Spans 2 rows */
+  background: var(--secondary);
+  font-size: x-large;
+}
+
+.medium {
+  font-size: 5vw;
+  grid-column: span 2; /* Spans 2 columns */
+  background: var(--secondary);
+}
+
+.small {
+  font-size: 2vw;
+  aspect-ratio: 1/1;
+  background: var(--secondary);
+}
+
+
+
+.page-title {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
 }
 
 .image-card {
   position: relative;
-  width: 30vw;
+  width: 25vw;
   aspect-ratio: 2 / 3;
   overflow: hidden;
   border-radius: 5px;
@@ -115,11 +162,44 @@ section {
 
 
 
-@media screen and (min-width: 768px) {
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+
   section h1 {
     font-size: 8rem;
   }
+
   .parallax h1 {
     font-size: 4rem;
+  }
+
+  .bento-box {
+    grid-template-columns: repeat(2, 1fr); /* 4 equal columns */
+    grid-template-rows: repeat(4, 1fr);  /* Adjust rows for different heights */
+  }
+
+  .item {
+    font-size: 4vw; /* Scale font size for smaller screens */
+    padding: 15px;  /* Adjust padding for better spacing */
+  }
+
+  .large {
+    grid-column: span 2; /* Reset to 1 column */
+    grid-row: span 2;    /* Reset to 1 row */
+    font-size: 4vw;      /* Adjust font size for smaller screens */
+  }
+
+  .long {
+    grid-row: span 2;    
+    font-size: 4vw;      /* Adjust font size for smaller screens */
+  }
+
+  .medium {
+    grid-column: span 2; /* Reset to 1 column */
+    font-size: 4vw;      /* Adjust font size for smaller screens */
+  }
+
+  .small {
+    font-size: 4vw;      /* Adjust font size for smaller screens */
   }
 }
