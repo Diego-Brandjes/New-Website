@@ -11,12 +11,12 @@ function about() {
         <div className="container">
             <div className="bento-box poppins-regular">
                 <div className="item small">    
-                    <nav className='poppins-bold'>
+                    {/* <nav className='poppins-bold'>
                         <ul>
                         <li><a href="/home">Home</a></li>
                         <li><a href="/blog">Blog</a></li>
                         </ul>
-                    </nav>
+                    </nav> */}
                 </div>
                 <div className="item large">Large Item</div>
                 <div className="item medium">About Page</div>
