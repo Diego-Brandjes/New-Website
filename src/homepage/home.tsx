@@ -3,16 +3,24 @@ import VerticalMenu from "../components/navbar.tsx"
 function home() {
     return (
         <body className="body">
-        <VerticalMenu />
-        
-        <main>       
-        <div className="test">
-            <h1 className="poppins-bold">Japan </h1>
-            <h2 className="reddit-mono"> '25</h2>
+
+                <VerticalMenu />
+
+       
+        <main>    
+
+        <div className="page-title">
+            <img 
+              src="/page.svg"
+              loading="lazy" 
+              alt="Logo" 
+              className="logo" 
+            />
         </div>
 
         <section className="parallax bg"></section>
 
+        
         <div className="page">
 
                 <div className="image-card">
