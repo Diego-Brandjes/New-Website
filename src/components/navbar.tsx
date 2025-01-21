@@ -14,7 +14,7 @@ const VerticalMenu: React.FC = () => {
             />
           </a>
       
-      <nav className='poppins-bold'>
+      <nav className='poppins-bold magic-button'>
         <ul>
           <li><a href="/home">Home</a></li>
           <li><a href="/blog">Blog</a></li>

@@ -43,6 +43,7 @@ section {
   background-position: center; /* Centers the image */
   z-index: -3; /* Places it behind other content */
 }
+
 .bg::after {
   background-image: url("../public/fuji.jpg"); /* Adds the background image */
   opacity: 60%;
@@ -51,6 +52,7 @@ section {
 }
 .bg2::after {
   background-image: url("../public/ohori-park.jpg"); /* Adds the background image */
+  opacity: 60%;
   background-size: cover; /* Ensures it scales to cover the area */
   background-position: center; /* Centers the image */
 }
@@ -69,13 +71,13 @@ section {
   gap: 60px;
 }
 
+/* Bento stuff */
 .container {
   background-color: var(--primary);
   display: flex; /* Center the bento box vertically and horizontally */
   justify-content: center;
   align-items: center;
 }
-
 .bento-box {
   display: grid;
   grid-template-columns: repeat(6, 1fr); /* 4 equal columns */
@@ -85,7 +87,6 @@ section {
   padding: 10px;
   background-color: var(--primary);
 }
-
 .item {
   color: var(--light-font-color);
   display: flex;
@@ -95,7 +96,6 @@ section {
   padding: 20px;
   text-align: center;
 }
-
 .large {
   aspect-ratio: 1/1;
   grid-column: span 2; /* Spans 2 columns */
@@ -103,20 +103,17 @@ section {
   background: var(--secondary);
   font-size: 3vw;
 }
-
 .long {
   grid-column: span 1; /* Spans 1 columns */
   grid-row: span 2;    /* Spans 2 rows */
   background: var(--secondary);
   font-size: 2vw;
 }
-
 .medium {
   font-size: 3vw;
   grid-column: span 2; /* Spans 2 columns */
   background: var(--secondary);
 }
-
 .small {
   font-size: 2vw;
   aspect-ratio: 1/1;
@@ -132,6 +129,9 @@ section {
   position: absolute;
   align-items: center;
   justify-content: center;
+}
+.page-title img {
+  width: 70vw;
 }
 
 .image-card {

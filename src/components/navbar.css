@@ -10,6 +10,9 @@
     position: fixed;
     z-index: 2;
   }
+.vertical-menu img {
+    width: 7vw;
+}
   
 .menu-icon {
     font-size: 5rem;
@@ -27,7 +30,7 @@ nav ul {
 }
   
 nav li {
-    margin: -20px 0;
+    margin: -2vh;
 }
   
 nav a {
@@ -44,4 +47,22 @@ nav li:hover::before {
     margin-left: -25px;
     position: absolute;
     font-size: 2.6rem;
-  }
+}
+@media screen and (max-width: 1200px) {
+
+    .magic-button {
+        visibility: hidden;
+    }
+    nav a {
+        font-size: 1.6rem;
+    }
+
+    /* Add the indicator for Blog */
+    nav li:hover::before {
+        font-size: 1.6rem;
+    }
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+}
