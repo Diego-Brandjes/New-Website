@@ -1,4 +1,4 @@
-import VerticalMenu from "../components/navbar.tsx"
+// import VerticalMenu from "../components/navbar.tsx"
 
 
 function about() {
