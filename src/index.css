@@ -72,7 +72,7 @@ section {
 .container {
   background-color: var(--primary);
   display: flex; /* Center the bento box vertically and horizontally */
-  justify-content: right;
+  justify-content: center;
   align-items: center;
 }
 
@@ -101,18 +101,18 @@ section {
   grid-column: span 2; /* Spans 2 columns */
   grid-row: span 2;    /* Spans 2 rows */
   background: var(--secondary);
-  font-size: xx-large;
+  font-size: 3vw;
 }
 
 .long {
   grid-column: span 1; /* Spans 1 columns */
   grid-row: span 2;    /* Spans 2 rows */
   background: var(--secondary);
-  font-size: x-large;
+  font-size: 2vw;
 }
 
 .medium {
-  font-size: 5vw;
+  font-size: 3vw;
   grid-column: span 2; /* Spans 2 columns */
   background: var(--secondary);
 }
