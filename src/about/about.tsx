@@ -13,15 +13,28 @@ function about() {
                 <div className="item long button">  
                     <VerticalMenu/>
                 </div>
-                {/* <div className="item medium">About Page 2</div> */}
-                <div className="item large">Large Item 1</div>
-                <div className="item small">About Page</div>
-                <div className="item large">Large Item 5</div>
-                <div className="item long">Long Item 4</div>
-                <div className="item small">Small Item 8</div>
-                <div className="item small">Small Item 6</div>
-                <div className="item small">Small Item 7</div>
-                <div className="item medium">wide Item 8</div>
+                <div className="item large">Large</div>
+                <div className="item small">About me</div>
+                <div className="item large">Bento</div>
+                <div className="item long">
+                    <ul>
+                        <li>Item a</li>
+                        <li>Item b</li>
+                        <li>Item c</li>
+                        <li>Item d</li>
+                    </ul>
+                </div>
+                <div className="item small">16:9</div>
+                    <div className="item small">123</div>
+                <div className="item small">
+                    <img 
+                        src="/fujifilm-2-logo-svg-vector.svg"
+                        loading="lazy" 
+                        alt="Camera Brand" 
+                        className="test"
+                    />
+                </div>
+                    <div className="item medium">Socials</div>
             </div>
         </div>
         </main>

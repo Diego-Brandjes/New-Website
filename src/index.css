@@ -90,31 +90,36 @@ section {
   gap: 10px;
   width: 100vw;
   padding: 10px;
-  background-color: var(--primary);
 }
+
 .item {
-  color: var(--light-font-color);
+  color: var(--p);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+  line-height: 6vh;
   padding: 10px;
-  text-align: center;
+  
 }
 
 .large {
-  aspect-ratio: 1/1;
   grid-column: span 2; /* Spans 2 columns */
   grid-row: span 2;    /* Spans 2 rows */
   background: var(--secondary);
-  font-size: 3vw;
+  font-size: 7vw;
 }
 .long {
   grid-column: span 1; /* Spans 1 columns */
   grid-row: span 2;    /* Spans 2 rows */
   background: var(--secondary);
   font-size: 2vw;
+  text-align: left;
 }
+.long li {
+  list-style: none;
+}
+
 .medium {
   font-size: 3vw;
   grid-column: span 2; /* Spans 2 columns */
@@ -122,9 +127,11 @@ section {
   background: var(--secondary);
 }
 .small {
+  text-align: center;
   aspect-ratio: 1/1;
-  font-size: 2vw;
+  font-size: 4vw;
   background: var(--secondary);
+  
 }
 
 
@@ -171,6 +178,11 @@ section {
   align-items: center;
   justify-content: center;
 }
+.test {
+  max-width: 100%;  /* Prevents the image from overflowing horizontally */
+  max-height: 100%; /* Prevents the image from overflowing vertically */
+  object-fit: contain; /* Ensures the image is scaled proportionally */
+}
 
 /* Media Query for smaller screens */
 @media screen and (max-width: 768px) {
@@ -196,13 +208,15 @@ section {
   .large {
     grid-column: span 2; /* Reset to 1 column */
     grid-row: span 2;    /* Reset to 1 row */
-    font-size: 4vw;      /* Adjust font size for smaller screens */
+    font-size: 10vw;      /* Adjust font size for smaller screens */
   }
 
   .long {
     grid-row: span 2;    
     font-size: 4vw;      /* Adjust font size for smaller screens */
+    
   }
+
 
   .medium {
     grid-column: span 2; /* Reset to 1 column */
