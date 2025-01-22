@@ -3,50 +3,38 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.vertical-menu img {
+    width: 7vw;
+}
+.menu-container {
     height: 100vh;
     width: 10vw;
     margin-left: 2.5vw;
     margin-top: 5vh;
     position: fixed;
     z-index: 2;
-  }
-.vertical-menu img {
-    width: 7vw;
 }
-  
-.menu-icon {
-    font-size: 5rem;
-    color: var(--red-font-color); /* Red color for the Kanji */
-    margin-bottom: 20px;
-}
-.margins {
-    margin-top: 50px;
-    margin-left: 50px;
-}
-  
+ 
 nav ul {
     list-style: none;
     padding: 0;
 }
-  
 nav li {
     margin: -2vh;
 }
-  
 nav a {
     text-decoration: none;
-    color: white;
-    font-size: 2.6rem;
+    color: var(--light-font-color);
+    font-size: 2.6vw;
     font-weight: bold;
     transition: color 0.3s ease;
 }
-
-/* Add the indicator for Blog */
 nav li:hover::before {
     content: '>'; /* The indicator symbol */
     margin-left: -25px;
     position: absolute;
-    font-size: 2.6rem;
+    font-size: 2.6vw;
 }
 @media screen and (max-width: 1200px) {
 
@@ -61,8 +49,4 @@ nav li:hover::before {
     nav li:hover::before {
         font-size: 1.6rem;
     }
-}
-
-/* Media Query for smaller screens */
-@media screen and (max-width: 768px) {
 }

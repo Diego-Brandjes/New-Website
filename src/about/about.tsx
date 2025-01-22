@@ -1,4 +1,4 @@
-// import VerticalMenu from "../components/navbar.tsx"
+import VerticalMenu from "../components/navbar";
 
 
 function about() {
@@ -10,25 +10,18 @@ function about() {
 
         <div className="container">
             <div className="bento-box poppins-regular">
-                <div className="item small">  
-                      
-                    <nav className='poppins-bold button'>
-                        <ul>
-                        <li><a href="/home">Home</a></li>
-                        <li><a href="/blog">Blog</a></li>
-                        </ul>
-                    </nav>
+                <div className="item long button">  
+                    <VerticalMenu/>
                 </div>
-                <div className="item large">Large Item</div>
-                <div className="item medium">About Page</div>
-                <div className="item small">Small Item</div>
-                <div className="item small">Small Item</div>
-                <div className="item large">Large Item</div>
-                <div className="item long">Long Item</div>
-
-                <div className="item small">Small Item</div>
-                <div className="item small">Small Item</div>
-                <div className="item small">Small Item</div>
+                {/* <div className="item medium">About Page 2</div> */}
+                <div className="item large">Large Item 1</div>
+                <div className="item small">About Page</div>
+                <div className="item large">Large Item 5</div>
+                <div className="item long">Long Item 4</div>
+                <div className="item small">Small Item 8</div>
+                <div className="item small">Small Item 6</div>
+                <div className="item small">Small Item 7</div>
+                <div className="item medium">wide Item 8</div>
             </div>
         </div>
         </main>
