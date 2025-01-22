@@ -47,7 +47,6 @@ section {
   background-position: center; /* Centers the image */
   z-index: -3; /* Places it behind other content */
 }
-
 .bg::after {
   background-image: url("../public/fuji.jpg"); /* Adds the background image */
   opacity: 60%;
@@ -55,7 +54,7 @@ section {
   background-position: center; /* Centers the image */
 }
 .bg2::after {
-  background-image: url("../public/ohori-park.jpg"); /* Adds the background image */
+  background-image: url("../public/Group.png"); /* Adds the background image */
   opacity: 60%;
   background-size: cover; /* Ensures it scales to cover the area */
   background-position: center; /* Centers the image */
@@ -91,7 +90,6 @@ section {
   width: 100vw;
   padding: 10px;
 }
-
 .item {
   color: var(--p);
   display: flex;       /* Enable flexbox for layout */
@@ -111,6 +109,11 @@ section {
 .item h3 {
   line-height: 100%;
  font-size: 70%;
+}
+.item img {
+  max-width: 100%;  /* Prevents the image from overflowing horizontally */
+  max-height: 100%; /* Prevents the image from overflowing vertically */
+  object-fit: contain; /* Ensures the image is scaled proportionally */
 }
 
 .large {
@@ -149,7 +152,6 @@ section {
   aspect-ratio: 1/1;
   font-size: 4vw;
   background: var(--secondary);
-  
 }
 
 
@@ -166,15 +168,21 @@ section {
   width: 70vw;
 }
 
+.text-card {
+  position: relative;
+  width: 25vw;
+  overflow: hidden;
+  border-radius: 5px;
+  z-index: 1;
+  background-color: #F94C35;
+}
+
 .image-card {
   position: relative;
   width: 25vw;
   aspect-ratio: 2 / 3;
   overflow: hidden;
   border-radius: 5px;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   z-index: 1;
 }
 
@@ -190,16 +198,6 @@ section {
 .image-card p {
   color: var(--light-font-color);
   font-size: x-large;
-}
-
-.button {
-  align-items: center;
-  justify-content: center;
-}
-.test {
-  max-width: 100%;  /* Prevents the image from overflowing horizontally */
-  max-height: 100%; /* Prevents the image from overflowing vertically */
-  object-fit: contain; /* Ensures the image is scaled proportionally */
 }
 
 /* Media Query for smaller screens */
