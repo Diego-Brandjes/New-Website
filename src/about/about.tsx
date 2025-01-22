@@ -11,7 +11,7 @@ function about() {
         <div className="container">
             <div className="bento-box poppins-regular">
 
-                <div className="item long button">  
+                <div className="item long">  
                     <VerticalMenu/>
                 </div>
 
@@ -44,7 +44,6 @@ function about() {
                         src="/fujifilm-2-logo-svg-vector.svg"
                         loading="lazy" 
                         alt="Camera Brand" 
-                        className="test"
                     />
                 </div>
                 <div className="item medium">
