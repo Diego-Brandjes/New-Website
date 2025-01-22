@@ -10,22 +10,35 @@ function about() {
 
         <div className="container">
             <div className="bento-box poppins-regular">
+
                 <div className="item long button">  
                     <VerticalMenu/>
                 </div>
-                <div className="item large">Large</div>
-                <div className="item small">About me</div>
-                <div className="item large">Bento</div>
-                <div className="item long">
-                    <ul>
-                        <li>Item a</li>
-                        <li>Item b</li>
-                        <li>Item c</li>
-                        <li>Item d</li>
-                    </ul>
+
+                <div className="item large">
+                <p className="small-text">Aspect Ratio</p>
+                    <h1>3:2</h1>
+
+                
                 </div>
-                <div className="item small">16:9</div>
-                    <div className="item small">123</div>
+
+                <div className="item small">                
+                    <h3>6240</h3>
+
+                </div>
+
+                <div className="item medium"><h2>About Me</h2></div>
+
+
+                <div className="item long">
+
+                </div>
+                <div className="item medium"></div>
+
+                <div className="item small"></div>
+
+                <div className="item small"></div>
+
                 <div className="item small">
                     <img 
                         src="/fujifilm-2-logo-svg-vector.svg"
@@ -34,7 +47,11 @@ function about() {
                         className="test"
                     />
                 </div>
-                    <div className="item medium">Socials</div>
+                <div className="item medium">
+                    <p className="small-text">Camera</p>
+                    <h3>Fujifilm XT30-II</h3>
+                    </div>
+
             </div>
         </div>
         </main>

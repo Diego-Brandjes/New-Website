@@ -94,13 +94,23 @@ section {
 
 .item {
   color: var(--p);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex;       /* Enable flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center vertically if needed */
+  align-items: center; /* Center horizontally if needed */
+  text-align: center;  /* Center-align text */
   border-radius: 10px;
   line-height: 6vh;
-  padding: 10px;
-  
+}
+.item h2 {
+ font-size: 135%;
+}
+.item h1 {
+ font-size: 150%;
+}
+.item h3 {
+  line-height: 100%;
+ font-size: 70%;
 }
 
 .large {
@@ -109,6 +119,14 @@ section {
   background: var(--secondary);
   font-size: 7vw;
 }
+
+.small-text {
+  font-size: 20%; /* Smaller text relative to the container */
+  margin: 0;        /* Remove default margin */
+  color: var(--light-font-color); /* Adjust color if necessary */
+  line-height: 100%;
+}
+
 .long {
   grid-column: span 1; /* Spans 1 columns */
   grid-row: span 2;    /* Spans 2 rows */
@@ -187,13 +205,6 @@ section {
 /* Media Query for smaller screens */
 @media screen and (max-width: 768px) {
 
-  section h1 {
-    font-size: 8rem;
-  }
-
-  .parallax h1 {
-    font-size: 4rem;
-  }
 
   .bento-box {
     grid-template-columns: repeat(2, 1fr); /* 4 equal columns */
@@ -202,7 +213,6 @@ section {
 
   .item {
     font-size: 4vw; /* Scale font size for smaller screens */
-    padding: 15px;  /* Adjust padding for better spacing */
   }
 
   .large {
@@ -211,13 +221,6 @@ section {
     font-size: 10vw;      /* Adjust font size for smaller screens */
   }
 
-  .long {
-    grid-row: span 2;    
-    font-size: 4vw;      /* Adjust font size for smaller screens */
-    
-  }
-
-
   .medium {
     grid-column: span 2; /* Reset to 1 column */
     font-size: 4vw;      /* Adjust font size for smaller screens */
@@ -225,6 +228,12 @@ section {
 
   .small {
     font-size: 4vw;      /* Adjust font size for smaller screens */
+  }
+
+  .small-text {
+    font-size: 35%; /* Smaller text relative to the container */
+    margin: 0;        /* Remove default margin */
+    color: var(--light-font-color); /* Adjust color if necessary */
   }
 }
 
