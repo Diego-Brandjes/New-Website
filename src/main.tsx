@@ -12,7 +12,7 @@ import "./components/navbar.css"
 import Home from './homepage/home.tsx'
 import Blog from './blog/blog.tsx'
 import About from './about/about.tsx'
-import NotFound from './notfound.tsx'
+import NotFound from './notfound/notfound.tsx'
 
 const router = createBrowserRouter([
   {
