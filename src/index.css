@@ -66,9 +66,9 @@ section {
   background-position: center; /* Centers the image */
 }
 .helper {
-  background-color: #F94C35;
+  background-color: #1900ff85;
   height: 100vh;
-  width: 100vw;
+
 }
 
 /* Page css */
@@ -159,22 +159,30 @@ section {
   color: var(--light-font-color); /* Adjust color if necessary */
 }
 
-
-/* PAGENOTFOUND STYLING */
 .notfound-page {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   font-size: 2vh;
-  background: var(--primary)
+  background: var(--primary);
+  flex-direction: column; /* Stack Drag and Content vertically */
 }
+
+.drag-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Add spacing between Drag and the content */
+}
+
 .notfound-content {
   text-align: center;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding: 0 20px; /* Adjust padding for responsiveness */
 }
+
 
 /* Page stuff */
 .page-banner {
@@ -256,7 +264,7 @@ section {
 }
 .page-card-small h1 {
   font-size: 7vw;
-  margin-top: -10vw;
+  margin-top: -5vw;
 }
 
 /* Media Query for smaller screens */
