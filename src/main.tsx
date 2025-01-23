@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 // load css
 import "./fonts.css";
 import "./index.css";
+import "./animation.css";
 import "./components/navbar.css"
 
 // Load pages
@@ -12,7 +13,6 @@ import Home from './homepage/home.tsx'
 import Blog from './blog/blog.tsx'
 import About from './about/about.tsx'
 import NotFound from './notfound.tsx'
-// import VerticalMenu from './components/navbar.tsx';
 
 const router = createBrowserRouter([
   {

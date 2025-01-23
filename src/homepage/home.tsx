@@ -1,61 +1,79 @@
 import VerticalMenu from "../components/navbar.tsx"
+import useScrollAnimation from "../components/useScrollAnimation.tsx";
 
 function home() {
+    useScrollAnimation();
+
     return (
-        <body className="body">
-            <div className="menu-container">
+    <body className="body">
+
+            {/* Load menu */}
+            <div className="menu-container ">
                 <VerticalMenu />
             </div>
        
-        <main>    
+    <main>    
 
-        <div className="page-title">
+        {/* Page banner  */}
+        <div className="page-banner">
             <img 
               src="/page.svg"
               loading="lazy" 
               alt="Logo" 
-              className="logo" 
+              className="logo animate-on-scroll" 
             />
         </div>
 
+        {/* First background parallax */}
         <section className="parallax bg"></section>
 
-        
-        <div className="page">
 
-                <div className="image-card">
-                    <p className="poppins-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-                </div>
-
-                <div className="image-card">
-                    <img src="tokyo-bay.jpg" alt="Osaka Castle" />
-                </div>
-
-                <div className="image-card">
-                    <img src="matsumoto.jpg" alt="Osaka Castle" />
-                </div>
-
-                <div className="image-card">
-                    <img src="hiroshima.jpg" alt="Osaka Castle" />
-                </div>
-
-                <div className="image-card">
-                    <img src="nakasendo.jpg" alt="Osaka Castle" />
-                </div>
-
-                <div className="image-card">
-                    <div className="block"></div>
-                    {/* <p className="poppins-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p> */}
+        <div className="intro">
+                <div className="page-card-wide poppins-thin">
+                    <p className="animate-on-scroll extra-padding font">I'm Diego — a Travel Photographer with a passion for video editing. I capture the world through my lens and enjoy creating compelling stories with my visuals.</p>
+                    <p className="animate-on-scroll font">more</p>
                 </div>
         </div>
 
+        {/* Chapter Page */}
         <section className="parallax bg2"></section>
+        <div className="chapter">
+            <div className="animate-on-scroll container-wide">
+                <div className="page-card-small poppins-thin">
 
+                    <h1 className="overlap poppins-bold">Fukuoka</h1>
+                    <p>
+                    Fukuoka is a lively city in southern Japan, known for its mix of history, modern charm, and delicious food. With beautiful parks, ancient temples, and famous ramen, its a perfect place to relax and explore.
+                    </p>
+                </div>
 
+                <div className="page-card-small ">
+                    <img src="asd.png" alt="Osaka Castle" />
+                </div>
+            </div>
+        </div>
+
+        {/* Chapter Page */}
+        <section className="parallax bg2"></section>
+        <div className="chapter">
+            <div className="animate-on-scroll container-wide">
+
+                <div className="page-card-small">
+                    <img src="asd.png" alt="Osaka Castle" />
+                </div>
+                <div className="page-card-small poppins-thin">
+                    <h1 className="overlap poppins-bold">Fukuoka</h1>
+                    <p>
+                        Fukuoka is a lively city in southern Japan, known for its mix of history, modern charm, and delicious food. With beautiful parks, ancient temples, and famous ramen, its a perfect place to relax and explore.
+
+                    </p>
+                </div>
+            </div>
+        </div>
         
 
-        </main>
-        </body>
+    </main>
+    </body>
     );
 }
 export default home;

@@ -16,7 +16,7 @@ function about() {
                 </div>
 
                 <div className="item large">
-                <p className="small-text">Aspect Ratio</p>
+                    <p className="small-text">Aspect Ratio</p>
                     <h1>3:2</h1>
 
                 

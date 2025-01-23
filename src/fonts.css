@@ -19,7 +19,6 @@
     font-weight: 700;
     font-style: normal;
     color: var(--light-font-color);
-
 }
 
 .poppins-regular {
@@ -27,7 +26,12 @@
     font-weight: 400;
     font-style: normal;
     color: var(--light-font-color);
-
+}
+.poppins-thin {
+    font-family: "Poppins", serif;
+    font-weight: 200;
+    font-style: normal;
+    color: var(--light-font-color);
 }
 
 .reddit-mono {
@@ -36,5 +40,9 @@
     font-style: normal;
     color: var(--red-font-color);
     letter-spacing: -5px;
+}
+
+.extra-padding {
+    padding-left: 5vw;
 }
   
