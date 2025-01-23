@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
 }
-.vertical-menu img {
+.vertical-menu-item {
     margin-top: 5vh;
     width: 7vw;
 }

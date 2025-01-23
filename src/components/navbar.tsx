@@ -5,7 +5,7 @@ import './navbar.css';
 const VerticalMenu: React.FC = () => {
   return (
     <div className="vertical-menu">
-      <a href="/home" aria-current="page" className="">
+      <a href="/home" aria-current="page" className="vertical-menu-item">
             <img 
               src="/logo.svg"
               loading="lazy" 
