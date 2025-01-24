@@ -169,10 +169,10 @@ section {
   margin-top: -5vw;
 }
 .page-card-small h3 {
-  font-size: 1.5vw;
+  font-size: 2vw;
   font-weight: 100;
+  line-height: 100%;
   margin-top: -5vw;
-  margin-right: 150px;
 }
 
 
@@ -281,9 +281,7 @@ section {
 /* Media Query for smaller screens */
 @media screen and (max-width: 768px) {
 
-  .page-card-small {
-    flex: 1 1 calc(50% - 20px);  /* Adjust to two items per row on tablets */
-  }
+
 
   .bento-box {
     grid-template-columns: repeat(2, 1fr); /* 4 equal columns */
@@ -318,6 +316,12 @@ section {
     font-size: 10vw;
     margin-top: -5vw;
   }
+  .page-card-small h3 {
+    font-size: 3.5vw;
+    font-weight: 100;
+    margin-top: -5vw;
+    margin-right: 10vw;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -325,4 +329,5 @@ section {
     grid-template-columns: repeat(3, 1fr); /* 4 equal columns */
     grid-template-rows: repeat(4, 1fr);  /* Adjust rows for different heights */
   }
+
 }
