@@ -11,7 +11,6 @@ import "./components/navbar.css"
 // Load pages
 import Home from './homepage/home.tsx'
 import Blog from './blog/blog.tsx'
-import About from './about/about.tsx'
 import NotFound from './notfound/notfound.tsx'
 
 const router = createBrowserRouter([
@@ -26,10 +25,6 @@ const router = createBrowserRouter([
   {
     path: "/blog",
     element: <Blog />,
-  },
-  {
-    path: "/about",
-    element: <About />,
   },
   {
     path: "*",  // Catch-all route

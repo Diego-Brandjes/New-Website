@@ -80,7 +80,27 @@ section {
   width: 70vw;
 }
 
-
+h1 {
+  font-size: 7vw;
+}
+h2 {
+  font-size: 5vw;
+}
+h3 {
+  padding: 0;
+  font-size: 3vw;
+  font-weight: 100;
+  line-height: 10%;
+}
+h4 {
+  font-weight: 200;
+  font-size: 4vw;
+  line-height: 4vw;
+}
+p {
+  line-height: 100%;
+  font-size: 3vw;
+}
 
 /* HomePage css */
 /* Intro css */
@@ -107,15 +127,8 @@ section {
   padding-right: 10vw;
   z-index: 1;
 }
-.page-card-wide h1 {
-  font-weight: 200;
-  font-size: 4vw;
-  line-height: 4.5vw;
-}
-.page-card-wide p {
-  font-size: 2vw;
-  line-height: 100%;
-}
+
+
 
 /* Content css */
 .chapter {
@@ -155,101 +168,9 @@ section {
   display: block;
   padding-bottom: 5vh;
 }
-.page-card-small p {
-  font-size: 3vw;
-  line-height: 100%;
+.page-card-text {
+  line-height: 150%;
   margin-top: -5vw;
-}
-.page-card-small h1 {
-  font-size: 7vw;
-  margin-top: -5vw;
-}
-.page-card-small h2 {
-  font-size: 3vw;
-  margin-top: -5vw;
-}
-.page-card-small h3 {
-  font-size: 2vw;
-  font-weight: 100;
-  line-height: 100%;
-  margin-top: -5vw;
-}
-
-
-
-
-/* About Page */
-.container {
-  background-color: var(--primary);
-  display: flex; /* Enables flexbox */
-  justify-content: center; /* Centers on the x-axis */
-  align-items: start; /* Centers on the y-axis */
-  height: 100vh; /* Ensures the container takes up the full viewport height */
-}
-.bento-box {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 4 equal columns */
-  grid-template-rows: repeat(2, 1fr);  /* Adjust rows for different heights */
-  gap: 10px;
-  width: 100vw;
-  padding: 10px;
-}
-.item {
-  display: flex;       /* Enable flexbox for layout */
-  flex-direction: column; /* Stack children vertically */
-  justify-content: center; /* Center vertically if needed */
-  align-items: center; /* Center horizontally if needed */
-  text-align: center;  /* Center-align text */
-  border-radius: 10px;
-  line-height: 6vh;
-}
-.item h2 {
- font-size: 135%;
-}
-.item h1 {
- font-size: 100%;
-}
-.item h3 {
-  line-height: 100%;
- font-size: 70%;
-}
-.item img {
-  max-width: 100%;  /* Prevents the image from overflowing horizontally */
-  max-height: 100%; /* Prevents the image from overflowing vertically */
-  object-fit: contain; /* Ensures the image is scaled proportionally */
-}
-.large {
-  grid-column: span 2; /* Spans 2 columns */
-  grid-row: span 2;    /* Spans 2 rows */
-  background: var(--secondary);
-  font-size: 7vw;
-}
-.long {
-  grid-column: span 1; /* Spans 1 columns */
-  grid-row: span 2;    /* Spans 2 rows */
-  background: var(--secondary);
-  font-size: 2vw;
-  text-align: left;
-}
-.long li {
-  list-style: none;
-}
-.medium {
-  font-size: 3vw;
-  grid-column: span 2; /* Spans 2 columns */
-  grid-row: span 1;
-  background: var(--secondary);
-}
-.small {
-  text-align: center;
-  aspect-ratio: 1/1;
-  font-size: 4vw;
-  background: var(--secondary);
-}
-.small-text {
-  font-size: 35%; /* Smaller text relative to the container */
-  margin: 0;        /* Remove default margin */
-  color: var(--light-font-color); /* Adjust color if necessary */
 }
 
 
@@ -281,46 +202,27 @@ section {
 /* Media Query for smaller screens */
 @media screen and (max-width: 768px) {
 
-
-
-  .bento-box {
-    grid-template-columns: repeat(2, 1fr); /* 4 equal columns */
-    grid-template-rows: repeat(4, 1fr);  /* Adjust rows for different heights */
-  }
-  .item {
-    font-size: 4vw; /* Scale font size for smaller screens */
-  }
-  .large {
-    grid-column: span 2; /* Reset to 1 column */
-    grid-row: span 2;    /* Reset to 1 row */
-    font-size: 10vw;      /* Adjust font size for smaller screens */
-  }
-  .medium {
-    grid-column: span 2; /* Reset to 1 column */
-    font-size: 4vw;      /* Adjust font size for smaller screens */
-  }
-  .small {
-    font-size: 4vw;      /* Adjust font size for smaller screens */
-  }
-  .small-text {
-    font-size: 55%; /* Smaller text relative to the container */
-    line-height: 100%;
-    color: var(--light-font-color); /* Adjust color if necessary */
-  }
-
-  .page-card-small p {
-    font-size: 6vw;
-    line-height: 100%;
-  }
-  .page-card-small h1 {
-    font-size: 10vw;
+  .page-card-text {
+    line-height: 170%;
     margin-top: -5vw;
   }
-  .page-card-small h3 {
-    font-size: 3.5vw;
-    font-weight: 100;
-    margin-top: -5vw;
-    margin-right: 10vw;
+  
+  h1 {
+    font-size: 15vw;
+  }
+  h2 {
+    font-size: 5vw;
+  }
+  h3 {
+    font-size: 7.5vw;
+  }
+  h4 {
+    font-size: 18vw;
+    line-height: 6vw;
+  }
+  p {
+    line-height: 120%;
+    font-size: 8vw;
   }
 }
 
@@ -329,5 +231,4 @@ section {
     grid-template-columns: repeat(3, 1fr); /* 4 equal columns */
     grid-template-rows: repeat(4, 1fr);  /* Adjust rows for different heights */
   }
-
 }
