@@ -30,8 +30,8 @@ function home() {
 
         <div className="intro">
                 <div className="page-card-wide poppins-thin">
-                    <p className="animate-on-scroll extra-padding font">I'm Diego — a Travel Photographer with a passion for video editing. I capture the world through my lens and enjoy creating compelling stories with my visuals.</p>
-                    <p className="animate-on-scroll font">more</p>
+                    <p className="animate-on-scroll extra-padding">I'm Diego — a Travel Photographer with a passion for video editing. I capture the world through my lens and enjoy creating compelling stories with my visuals.</p>
+                    <p className="animate-on-scroll poppins-small">more</p>
                 </div>
         </div>
 
