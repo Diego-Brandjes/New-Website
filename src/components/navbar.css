@@ -5,7 +5,7 @@
     align-items: center;
 }
 .vertical-menu-item {
-    margin-top: 5vh;
+    margin-top: 20px;
     width: 7vw;
 }
 .menu-container {
@@ -14,36 +14,133 @@
     position: fixed;
     z-index: 2;
 }
+
+.menu-toggle-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  z-index: 999;
+  align-items: center;
+}
  
-nav ul {
-    list-style: none;
-    padding: 0;
+ul {
+  list-style: none;
+  padding: 0;
 }
-nav li {
-    margin: -2vh;
+
+.main-nav li {
+  line-height: 240%;
+  position: relative; /* Required for positioning the pseudo-element */
+  text-align: left;
 }
-nav a {
-    text-decoration: none;
-    color: var(--light-font-color);
-    font-size: 2.6vw;
+
+li a {
+  text-decoration: none;
+  color: var(--light-font-color);
+  font-size: 2.5vw;
+  position: relative; /* Required for pseudo-element positioning */
+  font-family: 'poppins', sans-serif; /* Replace with your default font */
+  font-weight: 200;
+  transition: font-family 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition */
 }
-nav li:hover::before {
-    content: '>'; /* The indicator symbol */
-    margin-left: -30px;
-    position: absolute;
-    font-size: 2.6vw;
+
+li a::after {
+  content: ''; /* No text, just the line */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; /* Initially hidden */
+  transition: width 0.3s ease-in-out; /* Smooth expansion */
 }
+
+.main-nav li:hover a {
+  position: relative;
+  color: #2c2c2c;
+}
+
+
+
 @media screen and (max-width: 1200px) {
+  /* Hide the main navigation */
+  .main-nav {
+    visibility: hidden;
+  }
 
-    .magic-button {
-        visibility: hidden;
-    }
-    nav a {
-        font-size: 1.6rem;
-    }
+  /* Ensure the fullscreen menu is not visible initially */
+  .fullscreen-popup-menu {
+    display: none;
+  }
 
-    /* Add the indicator for Blog */
-    nav li:hover::before {
-        font-size: 1.6rem;
-    }
+  /* When toggled open, display the fullscreen menu */
+  .fullscreen-popup-menu.open {
+    display: flex; /* Make the menu appear */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--primary);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+    visibility: visible; /* Ensure it's visible */
+  }
+  .popup-nav.open {
+    visibility: visible;
+  }
+
+}
+
+/* Default state for the fullscreen menu (non-mobile) */
+.fullscreen-popup-menu {
+  display: none; /* Completely hide the menu */
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s ease, opacity 0.3s ease;
+}
+
+/* Toggled open state */
+.fullscreen-popup-menu.open {
+  display: flex; /* Show the menu */
+  visibility: visible;
+  opacity: 1;
+}
+
+.fullscreen-popup-menu nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.fullscreen-popup-menu nav li {
+  margin: 20px 0;
+  position: relative; /* Required for the underline */
+}
+
+.fullscreen-popup-menu nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 6vh; /* Adjust font size as necessary */
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  padding-bottom: 5px; /* Space for the underline */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.fullscreen-popup-menu nav a::after {
+  content: ''; /* The line */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; /* Initially hidden */
+  height: 2px; /* Line thickness */
+  background-color: white; /* Line color */
+  transition: width 0.3s ease-in-out; /* Smooth animation for the line */
+}
+
+.fullscreen-popup-menu nav li:hover a::after {
+  width: 100%; /* Expand the line to full width on hover */
 }
