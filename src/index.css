@@ -65,13 +65,25 @@ section {
   background-size: cover; /* Ensures it scales to cover the area */
   background-position: center; /* Centers the image */
 }
-.helper {
-  background-color: #1900ff85;
-  height: 100vh;
 
+
+/* HomePage Banner */
+.page-banner {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+.page-banner img {
+  width: 70vw;
 }
 
-/* Page css */
+
+
+/* HomePage css */
+/* Intro css */
 .intro {
   height: 100vh;
   padding: 5vw;
@@ -83,8 +95,90 @@ section {
   justify-content: center;
   align-items: center;
 }
+.page-card-wide {
+  position: relative;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  z-index: 1;
+}
+.page-card-wide h1 {
+  font-weight: 200;
+  font-size: 4vw;
+  line-height: 4.5vw;
+}
+.page-card-wide p {
+  font-size: 2vw;
+  line-height: 100%;
+}
 
-/* Bento stuff */
+/* Content css */
+.chapter {
+  padding: 5vw; /* Padding around the container */
+  background-color: var(--primary); /* Background color */
+  color: var(--light-font-color); /* Text color */
+  z-index: 2; /* Layering order */
+  width: 100%; /* Ensure it takes up the full width */
+  height: auto; /* Allow the height to adjust based on content */
+  margin: 0 auto; /* Centers the content horizontally */
+}
+.page-card-holder {
+  padding-right: 10vw;
+  display: flex;
+  flex-wrap: wrap;          /* Allow elements to wrap to the next row if needed */
+  justify-content: center;  /* Center-align the content */
+  align-items: flex-start;  /* Align items to the top */
+  width: 70%;
+  gap: 5vw;
+  height: auto;             /* Allow the container to grow based on content */
+  margin: 0 auto; /* Centers the container within its parent */
+}
+.page-card-small {
+  flex: 1 1 40%;             /* Adjust width to 50% of the container's width */
+  height: auto;              /* Flexible height */
+  display: flex;
+  flex-direction: column;    /* Stack the image and text vertically */
+  box-sizing: border-box;    /* Ensure padding doesn't affect width calculation */
+}
+.page-card-small img {
+  border-radius: 5px;
+  position: relative;
+  width: 100%;
+  height: auto;              /* Ensure the image adjusts its height automatically */
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  padding-bottom: 5vh;
+}
+.page-card-small p {
+  font-size: 3vw;
+  line-height: 100%;
+  margin-top: -5vw;
+}
+.page-card-small h1 {
+  font-size: 7vw;
+  margin-top: -5vw;
+}
+.page-card-small h2 {
+  font-size: 3vw;
+  margin-top: -5vw;
+}
+.page-card-small h3 {
+  font-size: 1.5vw;
+  font-weight: 100;
+  margin-top: -5vw;
+  margin-right: 150px;
+}
+
+
+
+
+/* About Page */
 .container {
   background-color: var(--primary);
   display: flex; /* Enables flexbox */
@@ -124,7 +218,6 @@ section {
   max-height: 100%; /* Prevents the image from overflowing vertically */
   object-fit: contain; /* Ensures the image is scaled proportionally */
 }
-
 .large {
   grid-column: span 2; /* Spans 2 columns */
   grid-row: span 2;    /* Spans 2 rows */
@@ -159,6 +252,9 @@ section {
   color: var(--light-font-color); /* Adjust color if necessary */
 }
 
+
+
+/* NotFound page css */
 .notfound-page {
   width: 100vw;
   height: 100vh;
@@ -170,102 +266,17 @@ section {
   background: var(--primary);
   flex-direction: column; /* Stack Drag and Content vertically */
 }
-
 .drag-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px; /* Add spacing between Drag and the content */
 }
-
 .notfound-content {
   text-align: center;
   padding: 0 20px; /* Adjust padding for responsiveness */
 }
 
-
-/* Page stuff */
-.page-banner {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  position: absolute;
-  align-items: center;
-  justify-content: center;
-}
-.page-banner img {
-  width: 70vw;
-}
-
-.page-card-wide {
-  position: relative;
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-  padding-left: 10vw;
-  padding-right: 10vw;
-  z-index: 1;
-}
-.page-card-wide p {
-  font-size: 4vw;
-  line-height: 100%;
-}
-
-.chapter {
-  padding: 5vw; /* Padding around the container */
-  background-color: var(--primary); /* Background color */
-  color: var(--light-font-color); /* Text color */
-  z-index: 2; /* Layering order */
-  width: 100%; /* Ensure it takes up the full width */
-  height: auto; /* Allow the height to adjust based on content */
-  margin: 0 auto; /* Centers the content horizontally */
-}
-
-.container-wide {
-  padding-right: 10vw;
-  display: flex;
-  flex-wrap: wrap;          /* Allow elements to wrap to the next row if needed */
-  justify-content: center;  /* Center-align the content */
-  align-items: flex-start;  /* Align items to the top */
-  width: 70%;
-  gap: 5vw;
-  height: auto;             /* Allow the container to grow based on content */
-  margin: 0 auto; /* Centers the container within its parent */
-}
-
-.page-card-small {
-  flex: 1 1 40%;             /* Adjust width to 50% of the container's width */
-  height: auto;              /* Flexible height */
-  display: flex;
-  flex-direction: column;    /* Stack the image and text vertically */
-  box-sizing: border-box;    /* Ensure padding doesn't affect width calculation */
-}
-
-.page-card-small img {
-  border-radius: 5px;
-  position: relative;
-  width: 100%;
-  height: auto;              /* Ensure the image adjusts its height automatically */
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  padding-bottom: 5vh;
-}
-
-
-.page-card-small p {
-  font-size: 3vw;
-  line-height: 100%;
-  margin-top: -5vw;
-
-}
-.page-card-small h1 {
-  font-size: 7vw;
-  margin-top: -5vw;
-}
 
 /* Media Query for smaller screens */
 @media screen and (max-width: 768px) {

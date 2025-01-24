@@ -27,18 +27,18 @@ function home() {
         {/* First background parallax */}
         <section className="parallax bg"></section>
 
-
+        {/* Intro Part */}
         <div className="intro">
-                <div className="page-card-wide poppins-thin">
-                    <p className="animate-on-scroll extra-padding">I'm Diego — a Travel Photographer with a passion for video editing. I capture the world through my lens and enjoy creating compelling stories with my visuals.</p>
-                    <p className="animate-on-scroll poppins-small">more</p>
-                </div>
+            <div className="page-card-wide poppins-thin">
+                <h1 className="animate-on-scroll extra-padding">I'm Diego — a Travel Photographer with a passion for video editing. I capture the world through my lens and enjoy creating compelling stories with my visuals.</h1>
+                <p className="animate-on-scroll">Scroll for more</p>
+            </div>
         </div>
 
         {/* Chapter Page */}
         <section className="parallax bg2"></section>
         <div className="chapter">
-            <div className="animate-on-scroll container-wide">
+            <div className="animate-on-scroll page-card-holder">
                 <div className="page-card-small poppins-thin">
 
                     <h1 className="overlap poppins-bold">Fukuoka</h1>
@@ -56,7 +56,7 @@ function home() {
         {/* Chapter Page */}
         <section className="parallax bg2"></section>
         <div className="chapter">
-            <div className="animate-on-scroll container-wide">
+            <div className="animate-on-scroll page-card-holder">
 
                 <div className="page-card-small">
                     <img src="asd.png" alt="Osaka Castle" />
@@ -65,8 +65,30 @@ function home() {
                     <h1 className="overlap poppins-bold">Fukuoka</h1>
                     <p>
                         Fukuoka is a lively city in southern Japan, known for its mix of history, modern charm, and delicious food. With beautiful parks, ancient temples, and famous ramen, its a perfect place to relax and explore.
-
                     </p>
+                </div>
+            </div>
+        </div>
+        
+
+        {/* Chapter Page */}
+        <div className="chapter">
+            <div className="animate-on-scroll page-card-holder">
+                <div className="page-card-small poppins-thin ">
+                <h2 className="overlap poppins-bold">About Me</h2>
+                </div>
+                <div className="page-card-small poppins-thin">
+
+                </div>
+                <div className="page-card-small poppins-thin ">
+                    <p>
+                        Fukuoka is a lively city in southern Japan, known for its mix of history, modern charm, and delicious food. With beautiful parks, ancient temples, and famous ramen, its a perfect place to relax and explore.
+                    </p>
+                </div>
+                <div className="page-card-small poppins-thin">
+                    <h3>
+                        Fukuoka is a lively city in southern Japan, known for its mix of history, modern charm, and delicious food. With beautiful parks, ancient temples, and famous ramen, its a perfect place to relax and explore.
+                    </h3>
                 </div>
             </div>
         </div>
