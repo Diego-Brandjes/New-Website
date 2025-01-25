@@ -73,9 +73,9 @@ function home() {
 
         {/* About Page */}
         <div className="chapter">
-            <div className="animate-on-scroll page-card-holder">
-            <div className="page-card-small poppins-thin page-card-text">
-            <h2 className="overlap poppins-bold">About Me</h2>
+            <div className="animate-on-scroll page-card-holder">     
+                <div className="page-card-small poppins-thin page-card-text">
+                    <h2 className="overlap poppins-bold">About Me</h2>
                 </div>
                 <div className="page-card-small poppins-thin page-card-text">
 
@@ -94,7 +94,9 @@ function home() {
                         <li><h3>Aspect Ratio 3:2</h3></li>
                         <li><h3>-</h3></li>
                         <li><h3>Diego Brandjes</h3></li>
-                        <li><h3>Email</h3></li>
+                        <li><a href="mailto:diegobrandjes@hotmail.com"><h3>Contact</h3></a></li>
+                        <li><h3>-</h3></li>
+                        <li><h3>© 2025</h3></li>
                     </ul>
                 </div>
             </div>

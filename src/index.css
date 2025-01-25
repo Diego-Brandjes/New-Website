@@ -101,6 +101,10 @@ p {
   line-height: 100%;
   font-size: 3vw;
 }
+.page-card-text li:hover a {
+  position: relative;
+  color: #bdbdbd;
+}
 
 /* HomePage css */
 /* Intro css */
@@ -218,11 +222,11 @@ p {
   }
   h4 {
     font-size: 18vw;
-    line-height: 6vw;
+    line-height: 7.5vw;
   }
   p {
     line-height: 120%;
-    font-size: 8vw;
+    font-size: 7vw;
   }
 }
 
