@@ -1,8 +1,83 @@
-import VerticalMenu from "../components/navbar.tsx"
-import useScrollAnimation from "../components/useScrollAnimation.tsx";
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import VerticalMenu from '../components/navbar.tsx';
 
-function home() {
-    useScrollAnimation();
+interface Chapter {
+  chapter: string;
+  link: string;
+  image: string;
+  paragraphs: string[];
+}
+
+interface PageData {
+  chapters: Chapter[];
+}
+
+const Home: React.FC = () => {
+  const [data, setData] = useState<PageData | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
+  const navigate = useNavigate();
+
+  // Fetch data
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`/test.json`);
+        if (!response.ok) {
+          throw new Error('Page not found');
+        }
+        const result: PageData = await response.json();
+        setData(result);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+        navigate('/page-not-found');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [navigate]);
+
+  // Setup scroll animations after data is loaded
+  useEffect(() => {
+    if (!loading) {
+      const elementsToAnimate = document.querySelectorAll(".animate-on-scroll");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in-view");
+            } else {
+              entry.target.classList.remove("in-view");
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+
+      elementsToAnimate.forEach((element) => observer.observe(element));
+
+      // Cleanup observer on component unmount
+      return () => observer.disconnect();
+    }
+  }, [loading]); // Run when loading is set to false
+
+  // If data is not loaded, show loading screen
+  if (loading) {
+    return (
+      <div className="notfound-page">
+        {/* Loading content */}
+      </div>
+    );
+  }
+
+  // If no data found, return null (handled by navigation)
+  if (!data) {
+    return null;
+  }
+
 
     return (
     <body className="body">
@@ -13,7 +88,7 @@ function home() {
             </div>
        
     <main>    
-
+ 
         {/* Page banner  */}
         <div className="page-banner">
             <img 
@@ -35,40 +110,27 @@ function home() {
             </div>
         </div>
 
-        {/* Chapter Page */}
-        <section className="parallax bg2"></section>
-        <div className="chapter">
+
+
+        {data.chapters.map((item, index) => (
+        <React.Fragment key={index}>
+            {/* Chapter Page */}
+            <section className="parallax bg2"></section>
+            <div className="chapter">
             <div className="animate-on-scroll page-card-holder">
                 <div className="page-card-small poppins-thin page-card-text">
-
-                    <h1 className="overlap poppins-bold">Fukuoka</h1>
-                    <p>
-                    Fukuoka is a lively city in southern Japan, known for its mix of history, modern charm, and delicious food. With beautiful parks, ancient temples, and famous ramen, its a perfect place to relax and explore.
-                    </p>
+                    <h1 className="overlap poppins-bold">{item.chapter}</h1>
+                    <p>{item.paragraphs && item.paragraphs.length > 0 ? item.paragraphs[0] : ''}</p>
+                    <a className="grey" href={item.link}><p>See more →</p></a>
                 </div>
 
                 <div className="page-card-small">
-                    <img src="asd.png" alt="Osaka Castle" />
+                    <a href={item.link}><img src={item.image || 'default-image.png'} alt={item.chapter} /></a>
                 </div>
             </div>
-        </div>
-
-        {/* Chapter Page */}
-        <section className="parallax bg2"></section>
-        <div className="chapter">
-            <div className="animate-on-scroll page-card-holder">
-
-                <div className="page-card-small">
-                    <img src="asd.png" alt="Osaka Castle" />
-                </div>
-                <div className="page-card-small poppins-thin page-card-text">
-                    <h1 className="overlap poppins-bold">Fukuoka</h1>
-                    <p>
-                        Fukuoka is a lively city in southern Japan, known for its mix of history, modern charm, and delicious food. With beautiful parks, ancient temples, and famous ramen, its a perfect place to relax and explore.
-                    </p>
-                </div>
             </div>
-        </div>
+        </React.Fragment>
+        ))}
         
 
         {/* About Page */}
@@ -102,9 +164,8 @@ function home() {
             </div>
         </div>
         
-
     </main>
     </body>
     );
 }
-export default home;
+export default Home;

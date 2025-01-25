@@ -1,0 +1,22 @@
+
+{
+  "chapters": [
+    {
+      "chapter": "Fukuoka",
+      "link": "/fukuoka",
+      "image": "fukuoka.png",
+      "paragraphs": [
+        "Fukuoka is a lively city ir its mix of history, modern charm, and delicious food. With parks, ancient temples, and famous ramen, its a perfect place to relax and explore."
+      ]
+    },
+    {
+      "chapter": "Tokyo",
+      "link": "/tokyo",
+      "image": "tokyo.png",
+      "paragraphs": [
+        "Living in this city was one of the best periods in my life, it was fun nearly ever day, I met so many wonderfull people, If I ever return here, I'd no doubt feel at home."
+      ]
+    }
+    
+  ]
+}
