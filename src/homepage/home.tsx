@@ -104,7 +104,7 @@ const Home: React.FC = () => {
 
       <main>
         {/* Page banner */}
-        <div className="page-banner">
+        <div className="page-banner  snap-scroll">
           <img
             src={page}
             loading="lazy"
@@ -117,7 +117,7 @@ const Home: React.FC = () => {
         <section className="parallax bg"></section>
 
         {/* Intro Part */}
-        <div className="intro">
+        <div className="intro  snap-scroll">
           <div className="page-card-wide poppins-thin">
             <h4 className="animate-on-scroll extra-padding">
               I'm Diego — a Travel Photographer with a passion for video editing. I
