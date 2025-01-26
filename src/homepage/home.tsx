@@ -129,7 +129,7 @@ const Home: React.FC = () => {
             <div className="chapter">
               <div className="animate-on-scroll page-card-holder">
                 <div className="page-card-small poppins-thin page-card-text">
-                  <h1 className="overlap poppins-bold">{item.chapter}</h1>
+                  <h1 className="poppins-bold">{item.chapter}</h1>
                   <p>{item.paragraphs && item.paragraphs.length > 0 ? item.paragraphs[0] : ''}</p>
                   <a className="grey" href={item.link}>
                     <p>See more →</p>
@@ -150,7 +150,7 @@ const Home: React.FC = () => {
         <div className="chapter">
           <div className="animate-on-scroll page-card-holder">
             <div className="page-card-small poppins-thin page-card-text">
-              <h2 className="overlap poppins-bold">About Me</h2>
+              <h2 className="poppins-bold">About Me</h2>
             </div>
             <div className="page-card-small poppins-thin page-card-text"></div>
             <div className="page-card-small poppins-thin page-card-text">

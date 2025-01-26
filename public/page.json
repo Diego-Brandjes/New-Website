@@ -2,12 +2,57 @@
 {
   "chapters": [
     {
+      "chapter": "Tokyo",
+      "link": "/fukuoka",
+      "banner": "/tokyo.png",
+      "image": "ueno.jpg",
+      "paragraphs": [
+        "Returning in late March, I witnessed the Cherry Blossoms at their end, adding to the city's charm. Tokyo became a cherished home, filled with unforgettable memories and vibrant culture."
+      ]
+    },
+    {
+      "chapter": "Yamanashi",
+      "link": "/yamanashi",
+      "banner": "/yamanashi.jpg",
+      "image": "ueno.jpg",
+      "paragraphs": [
+        "Returning in late March, I witnessed the Cherry Blossoms at their end, adding to the city's charm. Tokyo became a cherished home."
+      ]
+    },
+    {
+      "chapter": "Nakasendo",
+      "link": "/nakasendo",
+      "banner": "/matsumoto.jpg",
+      "image": "matsumoto.jpg",
+      "paragraphs": [
+        "Hiking the Nakasendo Trail was a journey through time, tracing ancient paths between Kyoto and Tokyo. Nature and history intertwined."      
+        ]
+    },
+    {
+      "chapter": "Osaka",
+      "link": "/osaka",
+      "banner": "/osaka.jpg",
+      "image": "osaka.jpg",
+      "paragraphs": [
+        "Lorem Ipsum"      
+        ]
+    },
+    {
       "chapter": "Fukuoka",
       "link": "/fukuoka",
-      "banner": "/DSCF6834.JPG",
-      "image": "fukuoka.png",
+      "banner": "/fukuoka.jpg",
+      "image": "fukuoka_poster.png",
       "paragraphs": [
         "Fukuoka is a lively city ir its mix of history, modern charm, and delicious food. With parks, ancient temples, and famous ramen, its a perfect place to relax and explore."
+      ]
+    },
+    {
+      "chapter": "Hiroshima",
+      "link": "/hiroshima",
+      "banner": "/hiroshima.jpg",
+      "image": "hiroshima.jpg",
+      "paragraphs": [
+        "Lorem Ipsum"
       ]
     },
     {
@@ -17,15 +62,6 @@
       "image": "okinawa.jpg",
       "paragraphs": [
         "Okinawa is a tropical paradise in southern Japan, known for its stunning beaches, vibrant coral reefs, and rich cultural heritage. With beautiful islands, traditional Ryukyuan castles, and unique cuisine, it’s a perfect place to relax and explore."
-      ]
-    },
-    {
-      "chapter": "Tokyo",
-      "link": "/tokyo",
-      "banner": "/tokyo.png",
-      "image": "tokyo.png",
-      "paragraphs": [
-        "Living in this city was one of the best periods in my life, it was fun nearly ever day, I met so many wonderfull people, If I ever return here, I'd no doubt feel at home."
       ]
     }
   ]

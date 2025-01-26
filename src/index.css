@@ -55,7 +55,7 @@ section {
 }
 
 .chapter-banner {
- height: 70vh;
+ height: 60vh;
 }
 
 .chapter-banner::after {
@@ -81,7 +81,7 @@ section {
 }
 
 h1 {
-  font-size: 7vw;
+  font-size: 6vw;
 }
 h2 {
   font-size: 5vw;
@@ -179,7 +179,7 @@ p {
   object-fit: cover;
   object-position: center;
   display: block;
-  padding-bottom: 5vh;
+  padding-bottom: 15vh;
 }
 
 .page-card-text {
@@ -243,6 +243,13 @@ p {
     line-height: 120%;
     font-size: 7vw;
   }
+  .chapter-banner {
+    height: 40vh;
+   }
+   
+   .chapter-banner::after {
+     height: 40vh;
+   }
 }
 
 @media screen and (max-width: 1200px) {
