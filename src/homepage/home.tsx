@@ -105,7 +105,7 @@ const Home: React.FC = () => {
         {/* Page banner */}
         <div className="page-banner">
           <img
-            src="/src/assets/page.svg"
+            src="../src/assets/page.svg"
             loading="lazy"
             alt="Logo"
             className="logo animate-on-scroll"

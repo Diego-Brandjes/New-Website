@@ -34,7 +34,7 @@ const VerticalMenu: React.FC = () => {
         onClick={toggleMenu}
       >
         <img
-          src="/src/assets/logo.svg"
+          src="../src/assets/logo.svg"
           loading="lazy"
           alt="Menu"
           className="vertical-menu-item"
