@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import VerticalMenu from '../components/navbar.tsx';
+import { Analytics } from "@vercel/analytics/react"
 
 interface Chapter {
   chapter: string;
@@ -87,6 +88,7 @@ const Home: React.FC = () => {
 
   return (
     <body className="body">
+      <Analytics/>
       {/* Load menu */}
       <div className="menu-container ">
         <VerticalMenu />
