@@ -22,6 +22,8 @@ main {
   
   scrollbar-width: none; /* Hide scrollbar in Firefox */
   -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+  scroll-snap-type: y mandatory; /* Enables vertical scroll snapping */
+  overflow-y: scroll; /* Allows scrolling */
 }
 
 /* Parallax stuff */
@@ -34,6 +36,9 @@ section {
   justify-content: center;
   color: var(--light-font-color);
   z-index: -2;
+}
+.snap-scroll {
+  scroll-snap-align: start; /* Snaps to the start of each chapter */
 }
 .parallax::after {
   content: " ";
@@ -144,39 +149,35 @@ p {
 
 /* Content css */
 .chapter {
-  padding: 5vw; /* Padding around the container */
-  background-color: var(--primary); /* Background color */
-  color: var(--light-font-color); /* Text color */
-  z-index: 2; /* Layering order */
-  width: 100%; /* Ensure it takes up the full width */
-  height: auto; /* Allow the height to adjust based on content */
-  margin: 0 auto; /* Centers the content horizontally */
-}
-.page-card-holder {
-  padding-right: 10vw;
   display: flex;
-  flex-wrap: wrap;          /* Allow elements to wrap to the next row if needed */
-  justify-content: center;  /* Center-align the content */
-  align-items: flex-start;  /* Align items to the top */
-  width: 70%;
-  gap: 5vw;
-  height: auto;             /* Allow the container to grow based on content */
-  margin: 0 auto; /* Centers the container within its parent */
+  flex-wrap: wrap; /* Allow wrapping when needed */
+  gap: 50px; /* Space between elements */
+  padding-left: 12vw;
+  padding-right: 12vw;
+  padding-top: 6vw;
+  background-color: var(--primary);
 }
+
 .page-card-small {
-  flex: 1 1 40%; /* Flex-grow, flex-shrink, and flex-basis to enable wrapping */
-  max-width: 90vw; /* Ensures it doesn't exceed 50% of the viewport width */
-  height: auto; /* Keeps height flexible */
-  display: flex;
-  flex-direction: column; /* Stack image and text vertically */
-  box-sizing: border-box; /* Padding won't affect width calculation */
+  flex: 1 1 45%; /* Set the width to 45% for both text and image */
 }
+
+.page-card-text {
+  line-height: 100%;
+  padding-top: 50px;
+}
+
+.page-card-small img {
+  max-width: 80%;
+  height: auto;
+  object-fit: contain; /* Ensure the image fits within both dimensions */
+  display: block;
+  margin: 0 auto;
+}
+
 .page-card-blog {
   height: auto; /* Keeps height flexible */
-  display: flex;
-  width: 100vw;
-  flex-direction: column; /* Stack image and text vertically */
-  box-sizing: border-box; /* Padding won't affect width calculation */
+  flex: 1 1 60%; /* Set the width to 45% for both text and image */
   text-align: left;
 }
 .page-card-blog p {
@@ -184,7 +185,7 @@ p {
   font-size: 2vw;
 }
 .page-card-blog h3 {
-  line-height: 10%;
+  line-height: 1%;
   font-size: 2vw;
 }
 
@@ -265,10 +266,12 @@ p {
   .page-card-blog p {
     line-height: 140%;
     font-size: 5vw;
+    margin-top: -5vh;
   }
   .page-card-blog h3 {
     line-height: 10%;
     font-size: 5vw;
+    padding: 0;
   }
   .chapter-banner {
     height: 40vh;
@@ -277,5 +280,12 @@ p {
    .chapter-banner::after {
      height: 40vh;
    }
+   .chapter {
+    flex-direction: column; /* Stack text and image vertically */
+  }
+
+  .page-card-small {
+    flex: 1 1 100%; /* Take full width on small screens */
+  }
 }
 

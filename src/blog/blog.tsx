@@ -89,10 +89,8 @@ const Blog: React.FC = () => {
       <main>
         {data.posts.map((item, index) => (
           <React.Fragment key={index}>
-            <div className="chapter ">
-
-              <div className="animate-on-scroll page-card-holder">
-                <div className="page-card-blog poppins-thin page-card-text">
+            <div className="chapter snap-scroll">
+                <div className="animate-on-scroll page-card-blog poppins-thin page-card-text">
                     <ul>
                         <li><h3>{item.post}</h3></li>
                         <li><h3>{item.date}</h3></li>
@@ -103,7 +101,6 @@ const Blog: React.FC = () => {
                 </div>
 
 
-              </div>
             </div>
           </React.Fragment>
         ))}

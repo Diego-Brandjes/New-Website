@@ -129,46 +129,46 @@ const Home: React.FC = () => {
         </div>
 
         {data.chapters.map((item, index) => (
-          <React.Fragment key={index}>
-            <section
-              className="parallax chapter-banner"
-              style={{
-                '--bg-image': `url(${item.banner || 'default-image.png'})`,
-              } as React.CSSProperties} // Cast style to React.CSSProperties
-            ></section>
-            <div className="chapter">
-              <div className="animate-on-scroll page-card-holder">
-                <div className="page-card-small poppins-thin page-card-text">
-                  <h1 className="poppins-bold">{item.chapter}</h1>
-                  <p>{item.paragraphs && item.paragraphs.length > 0 ? item.paragraphs[0] : ''}</p>
-                  <a className="grey" href={item.link}>
-                    <p>See more →</p>
-                  </a>
-                </div>
+        <React.Fragment key={index}>
+          <section
+            className="parallax chapter-banner"
+            style={{
+              '--bg-image': `url(${item.banner || 'default-image.png'})`,
+            } as React.CSSProperties} // Cast style to React.CSSProperties
+          ></section>
 
-                <div className="page-card-small">
-                  <a href={item.link}>
-                    <img src={item.image || 'default-image.png'} alt={item.chapter} />
-                  </a>
-                </div>
-              </div>
+          <div className="chapter snap-scroll">
+            <div className="page-card-small animate-on-scroll poppins-thin page-card-text">
+              <h1 className="poppins-bold">{item.chapter}</h1>
+              <p>{item.paragraphs && item.paragraphs.length > 0 ? item.paragraphs[0] : ''}</p>
+              <a className="grey" href={item.link}>
+                <p>See more →</p>
+              </a>
             </div>
-          </React.Fragment>
-        ))}
+
+            <div className="page-card-small">
+              <a href={item.link}>
+                <img src={item.image || 'default-image.png'} alt={item.chapter} />
+              </a>
+            </div>
+          </div>
+        </React.Fragment>
+      ))}
+
 
         {/* About Page */}
-        <div className="chapter">
-          <div className="animate-on-scroll page-card-holder">
-            <div className="page-card-small poppins-thin page-card-text">
+        <div className="chapter snap-scroll">
+        <div className="page-card-small animate-on-scroll poppins-thin page-card-text">
               <h2 className="poppins-bold">About Me</h2>
             </div>
-            <div className="page-card-small poppins-thin page-card-text"></div>
-            <div className="page-card-small poppins-thin page-card-text">
+            <div className="page-card-small poppins-thin"></div>
+            <div className="page-card-small poppins-thin">
               <p>
               I'm Diego, a travel photographer from the Netherlands with a passion for exploring the world. I capture diverse cultures, landscapes, and stories through my lens, always looking for the beauty in every moment.
               </p>
             </div>
-            <div className="page-card-small poppins-thin page-card-text">
+            
+            <div className="page-card-small poppins-thin">
               <ul>
                 <li><h3>Fujifilm XT30II</h3></li>
                 <li><h3>26.1MP</h3></li>
@@ -183,8 +183,8 @@ const Home: React.FC = () => {
               </ul>
             </div>
           </div>
-        </div>
-      </main>
+          <div className="chapter snap-scroll"></div>
+          </main>
     </body>
   );
 };
