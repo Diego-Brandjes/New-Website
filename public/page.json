@@ -13,7 +13,7 @@
     {
       "chapter": "Okinawa",
       "link": "/okinawa",
-      "banner": "okinawa.jpg",
+      "banner": "/okinawa.jpg",
       "image": "okinawa.jpg",
       "paragraphs": [
         "Okinawa is a tropical paradise in southern Japan, known for its stunning beaches, vibrant coral reefs, and rich cultural heritage. With beautiful islands, traditional Ryukyuan castles, and unique cuisine, it’s a perfect place to relax and explore."
@@ -22,7 +22,7 @@
     {
       "chapter": "Tokyo",
       "link": "/tokyo",
-      "banner": "tokyo.png",
+      "banner": "/tokyo.png",
       "image": "tokyo.png",
       "paragraphs": [
         "Living in this city was one of the best periods in my life, it was fun nearly ever day, I met so many wonderfull people, If I ever return here, I'd no doubt feel at home."
