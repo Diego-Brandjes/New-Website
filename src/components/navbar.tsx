@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./navbar.css";
+import logo from "/src/assets/logo.svg";
 
 const VerticalMenu: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,7 +35,7 @@ const VerticalMenu: React.FC = () => {
         onClick={toggleMenu}
       >
         <img
-          src="../src/assets/logo.svg"
+          src={logo}
           loading="lazy"
           alt="Menu"
           className="vertical-menu-item"

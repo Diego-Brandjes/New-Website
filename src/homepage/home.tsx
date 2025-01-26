@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import VerticalMenu from '../components/navbar.tsx';
 import { Analytics } from "@vercel/analytics/react";
+import page from "/src/assets/page.svg";
 
 interface Chapter {
   chapter: string;
@@ -105,7 +106,7 @@ const Home: React.FC = () => {
         {/* Page banner */}
         <div className="page-banner">
           <img
-            src="../src/assets/page.svg"
+            src={page}
             loading="lazy"
             alt="Logo"
             className="logo animate-on-scroll"
