@@ -155,10 +155,7 @@ const Home: React.FC = () => {
             <div className="page-card-small poppins-thin page-card-text"></div>
             <div className="page-card-small poppins-thin page-card-text">
               <p>
-                Fukuoka is a lively city in southern Japan, known for its mix of
-                history, modern charm, and delicious food. With beautiful parks,
-                ancient temples, and famous ramen, its a perfect place to relax and
-                explore.
+              I'm Diego, a travel photographer from the Netherlands with a passion for exploring the world. I capture diverse cultures, landscapes, and stories through my lens, always looking for the beauty in every moment.
               </p>
             </div>
             <div className="page-card-small poppins-thin page-card-text">
