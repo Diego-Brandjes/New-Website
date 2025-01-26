@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import VerticalMenu from '../components/navbar.tsx';
-import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react";
 
 interface Chapter {
   chapter: string;
@@ -95,9 +94,8 @@ const Home: React.FC = () => {
 
       {/*  VERCEL MODULES */}
       <Analytics/>
-      <SpeedInsights/>
 
-      
+
       {/* Load menu */}
       <div className="menu-container ">
         <VerticalMenu />
