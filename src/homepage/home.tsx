@@ -5,6 +5,7 @@ import VerticalMenu from '../components/navbar.tsx';
 interface Chapter {
   chapter: string;
   link: string;
+  banner: string;
   image: string;
   paragraphs: string[];
 }
@@ -18,11 +19,17 @@ const Home: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const navigate = useNavigate();
 
+  useEffect(() => {
+    // Dynamically set the background image via CSS variable
+    const root = document.documentElement;
+    root.style.setProperty('--bg-image-parallax1', `url('/path/to/your/image1.jpg')`);
+  }, []);
+
   // Fetch data
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`/test.json`);
+        const response = await fetch(`/page.json`);
         if (!response.ok) {
           throw new Error('Page not found');
         }
@@ -42,15 +49,15 @@ const Home: React.FC = () => {
   // Setup scroll animations after data is loaded
   useEffect(() => {
     if (!loading) {
-      const elementsToAnimate = document.querySelectorAll(".animate-on-scroll");
+      const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
 
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              entry.target.classList.add("in-view");
+              entry.target.classList.add('in-view');
             } else {
-              entry.target.classList.remove("in-view");
+              entry.target.classList.remove('in-view');
             }
           });
         },
@@ -78,25 +85,22 @@ const Home: React.FC = () => {
     return null;
   }
 
-
-    return (
+  return (
     <body className="body">
+      {/* Load menu */}
+      <div className="menu-container ">
+        <VerticalMenu />
+      </div>
 
-            {/* Load menu */}
-            <div className="menu-container ">
-                <VerticalMenu />
-            </div>
-       
-    <main>    
- 
-        {/* Page banner  */}
+      <main>
+        {/* Page banner */}
         <div className="page-banner">
-            <img 
-              src="/page.svg"
-              loading="lazy" 
-              alt="Logo" 
-              className="logo animate-on-scroll" 
-            />
+          <img
+            src="/page.svg"
+            loading="lazy"
+            alt="Logo"
+            className="logo animate-on-scroll"
+          />
         </div>
 
         {/* First background parallax */}
@@ -104,68 +108,78 @@ const Home: React.FC = () => {
 
         {/* Intro Part */}
         <div className="intro">
-            <div className="page-card-wide poppins-thin">
-                <h4 className="animate-on-scroll extra-padding">I'm Diego — a Travel Photographer with a passion for video editing. I capture the world through my lens and enjoy creating compelling stories with my visuals.</h4>
-                <p className="animate-on-scroll">Scroll for more</p>
-            </div>
+          <div className="page-card-wide poppins-thin">
+            <h4 className="animate-on-scroll extra-padding">
+              I'm Diego — a Travel Photographer with a passion for video editing. I
+              capture the world through my lens and enjoy creating compelling stories
+              with my visuals.
+            </h4>
+            <p className="animate-on-scroll">Scroll for more</p>
+          </div>
         </div>
 
-
-
         {data.chapters.map((item, index) => (
-        <React.Fragment key={index}>
-            {/* Chapter Page */}
-            <section className="parallax bg2"></section>
+          <React.Fragment key={index}>
+            <section
+              className="parallax chapter-banner"
+              style={{
+                '--bg-image': `url(${item.banner || 'default-image.png'})`,
+              } as React.CSSProperties} // Cast style to React.CSSProperties
+            ></section>
             <div className="chapter">
-            <div className="animate-on-scroll page-card-holder">
+              <div className="animate-on-scroll page-card-holder">
                 <div className="page-card-small poppins-thin page-card-text">
-                    <h1 className="overlap poppins-bold">{item.chapter}</h1>
-                    <p>{item.paragraphs && item.paragraphs.length > 0 ? item.paragraphs[0] : ''}</p>
-                    <a className="grey" href={item.link}><p>See more →</p></a>
+                  <h1 className="overlap poppins-bold">{item.chapter}</h1>
+                  <p>{item.paragraphs && item.paragraphs.length > 0 ? item.paragraphs[0] : ''}</p>
+                  <a className="grey" href={item.link}>
+                    <p>See more →</p>
+                  </a>
                 </div>
 
                 <div className="page-card-small">
-                    <a href={item.link}><img src={item.image || 'default-image.png'} alt={item.chapter} /></a>
+                  <a href={item.link}>
+                    <img src={item.image || 'default-image.png'} alt={item.chapter} />
+                  </a>
                 </div>
+              </div>
             </div>
-            </div>
-        </React.Fragment>
+          </React.Fragment>
         ))}
-        
 
         {/* About Page */}
         <div className="chapter">
-            <div className="animate-on-scroll page-card-holder">     
-                <div className="page-card-small poppins-thin page-card-text">
-                    <h2 className="overlap poppins-bold">About Me</h2>
-                </div>
-                <div className="page-card-small poppins-thin page-card-text">
-
-                </div>
-                <div className="page-card-small poppins-thin page-card-text">
-                    <p>
-                        Fukuoka is a lively city in southern Japan, known for its mix of history, modern charm, and delicious food. With beautiful parks, ancient temples, and famous ramen, its a perfect place to relax and explore.
-                    </p>
-                </div>
-                <div className="page-card-small poppins-thin page-card-text">
-                    <ul>
-                        <li><h3>Fujifilm XT30II</h3></li>
-                        <li><h3>26.1MP</h3></li>
-                        <li><h3>X-Trans CMOS 4</h3></li>
-                        <li><h3>6240x4160</h3></li>
-                        <li><h3>Aspect Ratio 3:2</h3></li>
-                        <li><h3>-</h3></li>
-                        <li><h3>Diego Brandjes</h3></li>
-                        <li><a href="mailto:diegobrandjes@hotmail.com"><h3>Contact</h3></a></li>
-                        <li><h3>-</h3></li>
-                        <li><h3>© 2025</h3></li>
-                    </ul>
-                </div>
+          <div className="animate-on-scroll page-card-holder">
+            <div className="page-card-small poppins-thin page-card-text">
+              <h2 className="overlap poppins-bold">About Me</h2>
             </div>
+            <div className="page-card-small poppins-thin page-card-text"></div>
+            <div className="page-card-small poppins-thin page-card-text">
+              <p>
+                Fukuoka is a lively city in southern Japan, known for its mix of
+                history, modern charm, and delicious food. With beautiful parks,
+                ancient temples, and famous ramen, its a perfect place to relax and
+                explore.
+              </p>
+            </div>
+            <div className="page-card-small poppins-thin page-card-text">
+              <ul>
+                <li><h3>Fujifilm XT30II</h3></li>
+                <li><h3>26.1MP</h3></li>
+                <li><h3>X-Trans CMOS 4</h3></li>
+                <li><h3>6240x4160</h3></li>
+                <li><h3>Aspect Ratio 3:2</h3></li>
+                <li><h3>-</h3></li>
+                <li><h3>Diego Brandjes</h3></li>
+                <li><a href="mailto:diegobrandjes@hotmail.com"><h3>Contact</h3></a></li>
+                <li><h3>-</h3></li>
+                <li><h3>© 2025</h3></li>
+              </ul>
+            </div>
+          </div>
         </div>
-        
-    </main>
+      </main>
     </body>
-    );
-}
+  );
+};
+
 export default Home;

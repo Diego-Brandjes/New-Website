@@ -54,13 +54,13 @@ section {
   background-position: center; /* Centers the image */
 }
 
-.bg2 {
+.chapter-banner {
  height: 70vh;
 }
 
-.bg2::after {
+.chapter-banner::after {
   height: 60vh;
-  background-image: url("../public/DSCF6834.JPG"); /* Adds the background image */
+  background-image: var(--bg-image); /* Use dynamic CSS variable */
   opacity: 100%;
   background-size: cover; /* Ensures it scales to cover the area */
   background-position: center; /* Centers the image */
