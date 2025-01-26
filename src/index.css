@@ -99,7 +99,7 @@ h4 {
 }
 p {
   line-height: 100%;
-  font-size: 3vw;
+  font-size: 2vw;
 }
 .page-card-text li:hover a {
   position: relative;
@@ -164,12 +164,31 @@ p {
   margin: 0 auto; /* Centers the container within its parent */
 }
 .page-card-small {
-  flex: 1 1 40%;             /* Adjust width to 50% of the container's width */
-  height: auto;              /* Flexible height */
+  flex: 1 1 40%; /* Flex-grow, flex-shrink, and flex-basis to enable wrapping */
+  max-width: 90vw; /* Ensures it doesn't exceed 50% of the viewport width */
+  height: auto; /* Keeps height flexible */
   display: flex;
-  flex-direction: column;    /* Stack the image and text vertically */
-  box-sizing: border-box;    /* Ensure padding doesn't affect width calculation */
+  flex-direction: column; /* Stack image and text vertically */
+  box-sizing: border-box; /* Padding won't affect width calculation */
 }
+.page-card-blog {
+  height: auto; /* Keeps height flexible */
+  display: flex;
+  width: 100vw;
+  flex-direction: column; /* Stack image and text vertically */
+  box-sizing: border-box; /* Padding won't affect width calculation */
+  text-align: left;
+}
+.page-card-blog p {
+  line-height: 140%;
+  font-size: 2vw;
+}
+.page-card-blog h3 {
+  line-height: 10%;
+  font-size: 2vw;
+}
+
+
 .page-card-small img {
   aspect-ratio: 0.76/1;
   border-radius: 5px;
@@ -241,7 +260,15 @@ p {
   }
   p {
     line-height: 120%;
-    font-size: 7vw;
+    font-size: 6.5vw;
+  }
+  .page-card-blog p {
+    line-height: 140%;
+    font-size: 5vw;
+  }
+  .page-card-blog h3 {
+    line-height: 10%;
+    font-size: 5vw;
   }
   .chapter-banner {
     height: 40vh;
@@ -252,9 +279,3 @@ p {
    }
 }
 
-@media screen and (max-width: 1200px) {
-  .bento-box {
-    grid-template-columns: repeat(3, 1fr); /* 4 equal columns */
-    grid-template-rows: repeat(4, 1fr);  /* Adjust rows for different heights */
-  }
-}
