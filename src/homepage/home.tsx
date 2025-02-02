@@ -158,17 +158,17 @@ const Home: React.FC = () => {
 
         {/* About Page */}
         <div className="chapter snap-scroll">
-        <div className="page-card-small animate-on-scroll poppins-thin page-card-text">
+        <div className="page-card-tiny animate-on-scroll poppins-thin">
               <h2 className="poppins-bold">About Me</h2>
             </div>
-            <div className="page-card-small poppins-thin"></div>
-            <div className="page-card-small poppins-thin">
+            <div className="page-card-tiny poppins-thin"></div>
+            <div className="page-card-tiny poppins-thin">
               <p>
               I'm Diego, a travel photographer from the Netherlands with a passion for exploring the world. I capture diverse cultures, landscapes, and stories through my lens, always looking for the beauty in every moment.
               </p>
             </div>
             
-            <div className="page-card-small poppins-thin">
+            <div className="page-card-tiny poppins-thin">
               <ul>
                 <li><h3>Fujifilm XT30II</h3></li>
                 <li><h3>26.1MP</h3></li>

@@ -37,9 +37,13 @@ section {
   color: var(--light-font-color);
   z-index: -2;
 }
-.snap-scroll {
+
+/* Uncomment to add snap scroll */
+/* .snap-scroll {
   scroll-snap-align: start; /* Snaps to the start of each chapter */
-}
+/* } */
+
+
 .parallax::after {
   content: " ";
   position: absolute;
@@ -154,21 +158,25 @@ p {
   gap: 50px; /* Space between elements */
   padding-left: 12vw;
   padding-right: 12vw;
-  padding-top: 6vw;
   background-color: var(--primary);
 }
 
 .page-card-small {
   flex: 1 1 45%; /* Set the width to 45% for both text and image */
+  padding-top: 10vh;
+}
+.page-card-tiny {
+  flex: 1 1 45%; /* Set the width to 45% for both text and image */
 }
 
 .page-card-text {
   line-height: 100%;
-  padding-top: 50px;
+  height: 100vh;
+  padding-top: 15vh;
 }
 
 .page-card-small img {
-  max-width: 80%;
+  max-width: 85%;
   height: auto;
   object-fit: contain; /* Ensure the image fits within both dimensions */
   display: block;
