@@ -96,7 +96,7 @@ const Blog: React.FC = () => {
                         <li><h3>{item.date}</h3></li>
                     </ul>
                 </div>
-                <div className="page-card-blog poppins-thin page-card-text">
+                <div className="animate-on-scroll page-card-blog poppins-thin page-card-text">
                   <p>{item.paragraphs && item.paragraphs.length > 0 ? item.paragraphs[0] : ''}</p>
                 </div>
 
