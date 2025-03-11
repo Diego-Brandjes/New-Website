@@ -44,6 +44,7 @@
 
 /* Used on homescreen for text */
 .extra-padding {
-    padding-left: 5vw;
+    /* padding-left: 5vw; */
+    margin-left: 10vw;
 }
   

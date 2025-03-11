@@ -166,7 +166,7 @@ p {
   padding-top: 10vh;
 }
 .page-card-tiny {
-  flex: 1 1 45%; /* Set the width to 45% for both text and image */
+  flex: 1 1 40%; /* Set the width to 45% for both text and image */
 }
 
 .page-card-text {

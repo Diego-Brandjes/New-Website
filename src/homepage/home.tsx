@@ -168,7 +168,7 @@ const Home: React.FC = () => {
               </p>
             </div>
             
-            <div className="page-card-tiny poppins-thin">
+            <div className="page-card-tiny poppins-thin extra-padding">
               <ul>
                 <li><h3>Fujifilm XT30II</h3></li>
                 <li><h3>26.1MP</h3></li>
