@@ -151,6 +151,7 @@ const Home: React.FC = () => {
                 <img src={item.image || 'default-image.png'} alt={item.chapter} />
               </a>
             </div>
+              <div className='chapter-fill'></div>
           </div>
         </React.Fragment>
       ))}
@@ -159,7 +160,7 @@ const Home: React.FC = () => {
         {/* About Page */}
         <div className="chapter snap-scroll">
         <div className="page-card-tiny animate-on-scroll poppins-thin">
-              <h2 className="poppins-bold">About Me</h2>
+              <h1 className="poppins-bold">About Me</h1>
             </div>
             <div className="page-card-tiny poppins-thin"></div>
             <div className="page-card-tiny poppins-thin">
@@ -167,8 +168,7 @@ const Home: React.FC = () => {
               I'm Diego, a travel photographer from the Netherlands with a passion for exploring the world. I capture diverse cultures, landscapes, and stories through my lens, always looking for the beauty in every moment.
               </p>
             </div>
-            
-            <div className="page-card-tiny poppins-thin extra-padding">
+            <div className="page-card-tiny poppins-thin">
               <ul>
                 <li><h3>Fujifilm XT30II</h3></li>
                 <li><h3>26.1MP</h3></li>
@@ -176,7 +176,6 @@ const Home: React.FC = () => {
                 <li><h3>6240x4160</h3></li>
                 <li><h3>Aspect Ratio 3:2</h3></li>
                 <li><h3>-</h3></li>
-                <li><h3>Diego Brandjes</h3></li>
                 <li><a href="mailto:diegobrandjes@hotmail.com"><h3>Contact</h3></a></li>
                 <li><h3>-</h3></li>
                 <li><h3>© 2025</h3></li>
