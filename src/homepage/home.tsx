@@ -166,7 +166,7 @@ const Home: React.FC = () => {
             <div className="page-card-tiny poppins-thin"></div>
             <div className="page-card-tiny poppins-thin">
               <p>
-              I'm Diego, a travel photographer from the Netherlands with a passion for exploring the world. I capture diverse cultures, landscapes, and stories through my lens, always looking for the beauty in every moment.
+              I'm Diego, a 25-year-old Dutch guy who loves to explore and travel around, taking things one step at a time. Whether its getting lost in a new city, trying dishes I can't pronounce, or just soaking in the local vibe, I'm all about the little moments that make a trip unforgettable. I'm not in a rush—just out here collecting stories, meeting people, and seeing where the road leads.              
               </p>
             </div>
             <div className="page-card-tiny poppins-thin">
