@@ -169,7 +169,7 @@ const Home: React.FC = () => {
               I'm Diego, a 25-year-old Dutch guy who loves to explore and travel around, taking things one step at a time. Whether its getting lost in a new city, trying dishes I can't pronounce, or just soaking in the local vibe, I'm all about the little moments that make a trip unforgettable. I'm not in a rush—just out here collecting stories, meeting people, and seeing where the road leads.              
               </p>
             </div>
-            <div className="page-card-tiny poppins-thin">
+            <div className="page-card-tiny poppins-thin extra-padding">
               <ul>
                 <li><h3>Fujifilm XT30II</h3></li>
                 <li><h3>26.1MP</h3></li>
