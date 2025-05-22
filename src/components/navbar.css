@@ -122,7 +122,7 @@ li a::after {
 
 .fullscreen-popup-menu nav a {
   text-decoration: none;
-  color: white;
+  color: var(--dark-font-color);
   font-size: 6vh; /* Adjust font size as necessary */
   font-family: 'Poppins', sans-serif;
   position: relative;
@@ -137,7 +137,7 @@ li a::after {
   left: 0;
   width: 0; /* Initially hidden */
   height: 2px; /* Line thickness */
-  background-color: white; /* Line color */
+  background-color: var(--dark-font-color); /* Line color */
   transition: width 0.3s ease-in-out; /* Smooth animation for the line */
 }
 
