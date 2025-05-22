@@ -120,7 +120,6 @@ const Home: React.FC = () => {
         <div className="intro  snap-scroll">
           <div className="page-card-wide poppins-thin">
             <h4 className="animate-on-scroll extra-padding">
-              Work in Progress...<br></br><br></br>
               I'm Diego — a Travel Photographer with a passion for video editing. I
               capture the world through my lens and enjoy creating compelling stories
               with my visuals.
@@ -131,12 +130,12 @@ const Home: React.FC = () => {
 
         {data.chapters.map((item, index) => (
         <React.Fragment key={index}>
-          <section
+          {/* <section
             className="parallax chapter-banner"
             style={{
               '--bg-image': `url(${item.banner || 'default-image.png'})`,
             } as React.CSSProperties} // Cast style to React.CSSProperties
-          ></section>
+          ></section> */}
 
           <div className="chapter snap-scroll">
             <div className="page-card-small animate-on-scroll poppins-thin page-card-text">
@@ -147,7 +146,7 @@ const Home: React.FC = () => {
               </a>
             </div>
 
-            <div className="page-card-small">
+            <div className="page-card-small animate-on-scroll">
               <a href={item.link}>
                 <img src={item.image || 'default-image.png'} alt={item.chapter} />
               </a>
