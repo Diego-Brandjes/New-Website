@@ -118,11 +118,14 @@ const Home: React.FC = () => {
 
         {/* Intro Part */}
         <div className="intro  snap-scroll">
-          <div className="page-card-wide poppins-thin">
+          <div className="page-card-wide instrument-serif-regular">
             <h4 className="animate-on-scroll extra-padding">
-              I'm Diego — a Travel Photographer with a passion for video editing. I
+              <span className="instrument-serif-regular-italic text-highlight">Diego Brandjes</span> — a Travel Photographer with a passion for video editing. I
               capture the world through my lens and enjoy creating compelling stories
               with my visuals.
+              <br>
+              </br>
+              <span className="instrument-serif-regular-italic">Enjoy my portfolio.</span>
             </h4>
             <p className="animate-on-scroll">Scroll for more</p>
           </div>
@@ -138,7 +141,7 @@ const Home: React.FC = () => {
           ></section> */}
 
           <div className="chapter snap-scroll">
-            <div className="page-card-small animate-on-scroll poppins-thin page-card-text">
+            <div className="page-card-small animate-on-scroll instrument-serif-regular page-card-text">
               <h1 className="poppins-bold">{item.chapter}</h1>
               <p>{item.paragraphs && item.paragraphs.length > 0 ? item.paragraphs[0] : ''}</p>
               <a className="grey" href={item.link}>

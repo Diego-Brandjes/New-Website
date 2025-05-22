@@ -17,7 +17,7 @@ export default function Drag() {
 const box: React.CSSProperties = {
     width: 150,
     height: 150,
-    backgroundColor: "white",
+    backgroundColor: "black",
     borderRadius: 10,
     display: "flex",
     justifyContent: "center",
@@ -28,7 +28,7 @@ const box: React.CSSProperties = {
 const textStyle: React.CSSProperties = {
     fontFamily: "poppins",
     fontSize: "4vh",
+    color: "white",
     fontWeight: "bold",
-    color: "black",
     textAlign: "center",
 };

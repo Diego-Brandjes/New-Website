@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./navbar.css";
-import logo from "/src/assets/logo.svg";
+import logo from "/src/assets/logo_lightmode.svg";
 
 const VerticalMenu: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

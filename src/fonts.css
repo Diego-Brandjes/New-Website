@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reddit+Mono:wght@200..900&display=swap');
-
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.root{
     line-height: 1.5;
     --primary: #000000;
     --red-font-color: #F94C35;
@@ -34,12 +33,22 @@
     color: var(--dark-font-color);
 }
 
-.reddit-mono {
-    font-family: "Reddit Mono";
-    font-weight: 500;
+.instrument-serif-regular-italic {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+  
+.instrument-serif-regular {
+    font-family: "Instrument Serif", serif;
+    font-weight: 200;
     font-style: normal;
-    color: var(--red-font-color);
-    letter-spacing: -5px;
+}
+
+.text-highlight{
+    display: inline-block;
+    padding: .05em 0.15em;
+    background: var(--yellowish);
 }
 
 /* Used on homescreen for text */

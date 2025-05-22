@@ -1,9 +1,10 @@
 :root {
   line-height: 1.5;
-  --primary: #000000;
+  --primary: #ffffff;
   --secondary: #1f1f1f;
   --red-font-color: #F94C35;
-  --dark-font-color: #FFFFFF;
+  --dark-font-color: #000000;
+  --yellowish: #FFC107;
 }
 
 html, body {
@@ -58,7 +59,7 @@ section {
 }
 .bg::after {
   background-image: url("../public/fuji.jpg"); /* Adds the background image */
-  opacity: 60%;
+  opacity: 99%;
   background-size: cover; /* Ensures it scales to cover the area */
   background-position: center; /* Centers the image */
 }
@@ -116,7 +117,7 @@ p {
 }
 .page-card-text li:hover a {
   position: relative;
-  color: #bdbdbd;
+  color: var(--yellowish);
 }
 .grey {
   text-decoration: none; /* Ensures underline is removed on hover as well */
@@ -124,7 +125,7 @@ p {
 }
 .grey:hover p{
   position: relative;
-  color: #bdbdbd;
+  color: var(--yellowish);
 }
 
 /* HomePage css */
