@@ -43,7 +43,7 @@ li a {
   position: relative; /* Required for pseudo-element positioning */
   font-family: 'poppins', sans-serif; /* Replace with your default font */
   font-weight: 200;
-  transition: font-family 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition */
+  transition: font-family 0.15s ease-in-out, color 0.15s ease-in-out; /* Smooth transition */
 }
 
 li a::after {
@@ -57,7 +57,7 @@ li a::after {
 
 .main-nav li:hover a {
   position: relative;
-  color: var(--yellowish);
+  color: var(--red-font-color);
 }
 
 
@@ -134,7 +134,7 @@ li a::after {
   content: ''; /* The line */
   position: absolute;
   bottom: 0;
-  background-color: var(--yellowish);
+  background-color: var(--red-font-color);
 
   left: 0;
   width: 0; /* Initially hidden */
