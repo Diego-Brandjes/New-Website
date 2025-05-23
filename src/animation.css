@@ -1,6 +1,6 @@
 .animate-on-scroll {
     opacity: 0; /* Start invisible */
-    transform: translateY(40px); /* Start slightly below */
+    transform: translateY(50px); /* Start slightly below */
     transition: transform 2s ease-out, opacity 2s ease-out;
 }
   
