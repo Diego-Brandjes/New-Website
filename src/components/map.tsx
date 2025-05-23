@@ -1,4 +1,5 @@
-import { motion } from "framer-motion"
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const draw = {
   hidden: {
@@ -22,13 +23,23 @@ const draw = {
 };
 
 export default function PathDrawing() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "0px 0px -100px 0px" });
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    }
+  }, [isInView, controls]);
   return (
     <motion.svg
+      ref={ref}
       width="800"
       height="800"
       viewBox="0 0 238 260"
       initial="hidden"
-      animate="visible"
+      animate={controls}
       style={{ maxWidth: "80vw" }}
     >
       <motion.path

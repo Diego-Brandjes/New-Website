@@ -132,11 +132,11 @@ const Home: React.FC = () => {
           />
         </div>
 
-        <section className="parallax">
+        <section className="parallax animate-on-scroll">
                   <PathDrawing/>
         </section>
 
-        <section className="parallax chapter-banner animate-on-scroll poppins-thin">
+        <section className="chapter-banner animate-on-scroll poppins-thin">
           <a className="grey" href="/home"><p>Italy</p></a>
           <p className='grey'>|</p>
           <a className="grey" href="/home"><p>Japan</p></a>
