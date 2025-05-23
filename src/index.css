@@ -117,15 +117,17 @@ p {
 }
 .page-card-text li:hover a {
   position: relative;
-  color: var(--yellowish);
+  color: var(--red-font-color);
 }
 .grey {
   text-decoration: none; /* Ensures underline is removed on hover as well */
+  padding-right: 10px;
+  padding-left: 10px;
   color: var(--dark-font-color);
 }
 .grey:hover p{
   position: relative;
-  color: var(--yellowish);
+  color: var(--red-font-color);
 }
 
 /* HomePage css */
@@ -134,7 +136,7 @@ p {
   height: 100vh;
   padding: 5vw;
   background-color: var(--primary);
-  color: var(--dark-font-color);
+  /* color: var(--dark-font-color); */
   z-index: 2;
   flex-wrap: wrap;
   display: flex;
