@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import VerticalMenu from '../components/navbar.tsx';
 import { Analytics } from "@vercel/analytics/react";
 import page from "/src/assets/page.svg";
+import PathDrawing from '../components/map.tsx';
 
 interface Chapter {
   chapter: string;
@@ -104,17 +105,6 @@ const Home: React.FC = () => {
 
       <main>
         {/* Page banner */}
-        <div className="page-banner  snap-scroll">
-          <img
-            src={page}
-            loading="lazy"
-            alt="Logo"
-            className="logo animate-on-scroll"
-          />
-        </div>
-
-        {/* First background parallax */}
-        <section className="parallax bg"></section>
 
         {/* Intro Part */}
         <div className="intro  snap-scroll">
@@ -127,18 +117,40 @@ const Home: React.FC = () => {
               </br>
               <span className="instrument-serif-regular-italic">Enjoy my portfolio.</span>
             </h4>
-            <p className="animate-on-scroll">Scroll for more</p>
+            <p className="animate-on-scroll poppins-thin">Scroll for more</p>
           </div>
         </div>
 
+        
+        {/* First background parallax */}
+        <div className="page-banner  snap-scroll">
+          <img
+            src={page}
+            loading="lazy"
+            alt="Logo"
+            className="animate-on-scroll"
+          />
+        </div>
+
+        <section className="parallax">
+                  <PathDrawing/>
+        </section>
+
+        <section className="parallax chapter-banner animate-on-scroll poppins-thin">
+          <a className="grey" href="/home"><p>Italy</p></a>
+          <p className='grey'>|</p>
+          <a className="grey" href="/home"><p>Japan</p></a>
+          <p className='grey'>|</p>
+          <a className="grey" href="/home"><p>France</p></a>
+        </section>
+
         {data.chapters.map((item, index) => (
-        <React.Fragment key={index}>
+          <React.Fragment key={index}>
           {/* <section
-            className="parallax chapter-banner"
             style={{
               '--bg-image': `url(${item.banner || 'default-image.png'})`,
-            } as React.CSSProperties} // Cast style to React.CSSProperties
-          ></section> */}
+              } as React.CSSProperties} // Cast style to React.CSSProperties
+              ></section> */}
 
           <div className="chapter snap-scroll">
             <div className="page-card-small animate-on-scroll instrument-serif-regular page-card-text">
@@ -162,11 +174,11 @@ const Home: React.FC = () => {
 
         {/* About Page */}
         <div className="chapter snap-scroll">
-        <div className="page-card-tiny animate-on-scroll poppins-thin">
+        <div className="page-card-tiny animate-on-scroll instrument-serif-regular">
               <h1 className="poppins-bold">About Me</h1>
             </div>
-            <div className="page-card-tiny poppins-thin"></div>
-            <div className="page-card-tiny poppins-thin">
+            <div className="page-card-tiny"></div>
+            <div className="page-card-tiny instrument-serif-regular">
               <p>
               I'm Diego, a 25-year-old Dutch guy who loves to explore and travel around, taking things one step at a time. Whether its getting lost in a new city, trying dishes I can't pronounce, or just soaking in the local vibe, I'm all about the little moments that make a trip unforgettable. I'm not in a rush—just out here collecting stories, meeting people, and seeing where the road leads.              
               </p>
