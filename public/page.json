@@ -5,7 +5,7 @@
       "chapters": [
     {
       "chapter": "Tokyo",
-      "link": "/fukuoka",
+      "link": "/tokyo",
       "image": "/ueno.png",
       "paragraphs": [
         "Returning in late March, I caught the cherry blossoms just as they were falling, adding a gentle beauty to the city. Tokyo quickly felt like home, full of vibrant neighborhoods, unforgettable moments, and a rhythm that keeps you moving."
@@ -71,6 +71,14 @@
           "paragraphs": [
             "The charm of Montmartre, river walks by the Seine, and morning espressos in hidden cafés—Paris never disappoints."
           ]
+        },
+        {
+          "chapter": "Annecy",
+          "link": "/annecy",
+          "image": "/annecy.png",
+          "paragraphs": [
+            "The charm of Montmartre, river walks by the Seine, and morning espressos in hidden cafés—Paris never disappoints."
+          ]
         }
       ]
     },
@@ -80,7 +88,7 @@
         {
           "chapter": "Sicily",
           "link": "/sicily",
-          "image": "/paris.png",
+          "image": "/messina.png",
           "paragraphs": [
             "The charm of Montmartre, river walks by the Seine, and morning espressos in hidden cafés—Paris never disappoints."
           ]
