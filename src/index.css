@@ -262,6 +262,17 @@ p {
 }
 
 
+@media screen and (max-width: 1200px) {
+  .darkmode-selector {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 10px;
+  margin-top: 20px;
+  padding: 0;
+  z-index: 3;
+  }
+}
 /* Media Query for smaller screens */
 @media screen and (max-width: 768px) {
 

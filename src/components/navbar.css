@@ -67,6 +67,12 @@ li a::after {
   .main-nav {
     visibility: hidden;
   }
+  
+  .menu-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
 
   /* Ensure the fullscreen menu is not visible initially */
   .fullscreen-popup-menu {

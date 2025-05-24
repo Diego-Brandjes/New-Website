@@ -139,7 +139,7 @@ return (
 
 
     <div className="darkmode-selector">
-      <a onClick={toggleDarkMode} className="poppins-thin main-nav" style={{ cursor: 'pointer' }}>
+      <a onClick={toggleDarkMode} className="poppins-thin" style={{ cursor: 'pointer' }}>
         {darkMode ? <Sun size={30} /> : <Moon size={30} />}
       </a>
     </div>
@@ -228,7 +228,7 @@ return (
             <li><h3>6240x4160</h3></li>
             <li><h3>Aspect Ratio 3:2</h3></li>
             <li><h3>-</h3></li>
-            <li><a href="mailto:diegobrandjes@hotmail.com"><h3>Contact</h3></a></li>
+            <li ><a href="mailto:diegobrandjes@hotmail.com"><h3>Contact</h3></a></li>
             <li><h3>-</h3></li>
             <li><h3>© 2025</h3></li>
           </ul>
