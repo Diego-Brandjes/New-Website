@@ -218,7 +218,7 @@ return (
       </div>
 
       {/* About Page */}
-      <div className="chapter snap-scroll">
+      <div id="about-section" className="chapter snap-scroll">
         <div className="page-card-tiny animate-on-scroll instrument-serif-regular">
           <h1 className="poppins-bold">About Me</h1>
         </div>

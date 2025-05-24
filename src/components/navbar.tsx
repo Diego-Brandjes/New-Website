@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./navbar.css";
 import logo_light from "/src/assets/logo_lightmode.svg";
 import logo_dark from "/src/assets/logo_darkmode.svg";
+import { HashLink as Link } from 'react-router-hash-link';
 
 interface VerticalMenuProps {
   darkMode: boolean;
@@ -61,6 +62,7 @@ const VerticalMenu: React.FC<VerticalMenuProps> = ({ darkMode }) => {
         <ul>
           <li><a href="/home">Home</a></li>
           <li><a href="/blog">Blog</a></li>
+          <li><Link smooth to="/home#about-section">About</Link></li>
         </ul>
       </nav>
 
@@ -68,7 +70,6 @@ const VerticalMenu: React.FC<VerticalMenuProps> = ({ darkMode }) => {
       <div className={`fullscreen-popup-menu ${isMenuOpen && isMobile ? "open" : ""} ${darkMode ? "dark" : "light"}`}>        <nav className="poppins-thin popup-nav">
           <ul>
             <li><a href="/home">Home</a></li>
-            <li><a href="/blog">Blog</a></li>
             <li><a onClick={toggleMenu}>Close</a></li>
           </ul>
         </nav>
