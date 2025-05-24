@@ -10,7 +10,6 @@ import "./components/navbar.css"
 
 // Load pages
 import Home from './homepage/home.tsx'
-import Blog from './blog/blog.tsx'
 import NotFound from './notfound/notfound.tsx'
 
 const router = createBrowserRouter([
@@ -21,10 +20,6 @@ const router = createBrowserRouter([
   {
     path: "/home",
     element: <Home />,
-  },
-  {
-    path: "/blog",
-    element: <Blog />,
   },
   {
     path: "*",  // Catch-all route

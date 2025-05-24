@@ -61,7 +61,6 @@ const VerticalMenu: React.FC<VerticalMenuProps> = ({ darkMode }) => {
       <nav className="poppins-thin main-nav">
         <ul>
           <li><a href="/home">Home</a></li>
-          <li><a href="/blog">Blog</a></li>
           <li><Link smooth to="/home#about-section">About</Link></li>
         </ul>
       </nav>
@@ -70,6 +69,7 @@ const VerticalMenu: React.FC<VerticalMenuProps> = ({ darkMode }) => {
       <div className={`fullscreen-popup-menu ${isMenuOpen && isMobile ? "open" : ""} ${darkMode ? "dark" : "light"}`}>        <nav className="poppins-thin popup-nav">
           <ul>
             <li><a href="/home">Home</a></li>
+            <li><Link smooth to="/home#about-section">About</Link></li>
             <li><a onClick={toggleMenu}>Close</a></li>
           </ul>
         </nav>

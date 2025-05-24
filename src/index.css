@@ -216,20 +216,6 @@ p {
   margin: 0 auto;
 }
 
-.page-card-blog {
-  height: auto; /* Keeps height flexible */
-  flex: 1 1 60%; /* Set the width to 45% for both text and image */
-  text-align: left;
-}
-.page-card-blog p {
-  line-height: 140%;
-  font-size: 2vw;
-}
-.page-card-blog h3 {
-  line-height: 1%;
-  font-size: 2vw;
-}
-
 .page-card-small img {
   aspect-ratio: 0.76/1;
   border-radius: 10px;
@@ -315,16 +301,6 @@ p {
   p {
     line-height: 120%;
     font-size: 6.5vw;
-  }
-  .page-card-blog p {
-    line-height: 140%;
-    font-size: 5vw;
-    margin-top: -5vh;
-  }
-  .page-card-blog h3 {
-    line-height: 10%;
-    font-size: 5vw;
-    padding: 0;
   }
 
   .chapter-banner::after {
