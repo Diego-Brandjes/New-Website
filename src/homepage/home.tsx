@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import VerticalMenu from '../components/navbar.tsx';
 import { Analytics } from "@vercel/analytics/react";
-import page from "/src/assets/page.svg";
 import PathDrawing from '../components/map.tsx';
+import page_light from "/src/assets/page_light.svg";
+import page_dark from "/src/assets/page_dark.svg";
 
 interface Chapter {
   chapter: string;
@@ -13,20 +14,34 @@ interface Chapter {
   paragraphs: string[];
 }
 
-interface PageData {
+interface Country {
+  country: string;
   chapters: Chapter[];
+}
+
+interface PageData {
+  countries: Country[];
 }
 
 const Home: React.FC = () => {
   const [data, setData] = useState<PageData | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
+  const [darkMode, setDarkMode] = useState(false);
   const navigate = useNavigate();
+  const [selectedCountry, setSelectedCountry] = useState<string>('japan');
+  const toggleDarkMode = () => {
+    setDarkMode(prev => !prev);
+  };
+
+  // Remember user preference using localStorage
+  useEffect(() => {
+    const saved = localStorage.getItem('darkMode');
+    if (saved === 'true') setDarkMode(true);
+  }, []);
 
   useEffect(() => {
-    // Dynamically set the background image via CSS variable
-    const root = document.documentElement;
-    root.style.setProperty('--bg-image-parallax1', `url('/path/to/your/image1.jpg')`);
-  }, []);
+    localStorage.setItem('darkMode', darkMode.toString());
+  }, [darkMode]);
 
   // Fetch data
   useEffect(() => {
@@ -77,9 +92,7 @@ const Home: React.FC = () => {
   // If data is not loaded, show loading screen
   if (loading) {
     return (
-      <div className="notfound-page">
-        {/* Loading content */}
-      </div>
+      <div className="notfound-page"></div>
     );
   }
 
@@ -88,119 +101,121 @@ const Home: React.FC = () => {
     return null;
   }
 
-
-
   // Main body
-  return (
-    <body className="body">
+return (
+  <body className={darkMode ? 'dark' : 'light'}>
+    {/*  VERCEL MODULES */}
+    <Analytics />
 
-      {/*  VERCEL MODULES */}
-      <Analytics/>
+    {/* Load menu */}
+    <div className="menu-container ">
+      <VerticalMenu darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+    </div>
 
-
-      {/* Load menu */}
-      <div className="menu-container ">
-        <VerticalMenu />
+    <main>
+      {/* Intro Part */}
+      <div className="intro  snap-scroll">
+        <div className="page-card-wide instrument-serif-regular">
+          <h4 className="animate-on-scroll">
+            <span className="instrument-serif-regular-italic text-highlight">Diego Brandjes</span> — a Travel Photographer with a passion for video editing. I
+            capture the world through my lens and enjoy creating compelling stories
+            with my visuals.
+            <br />
+            <span className="instrument-serif-regular-italic">Enjoy my portfolio.</span>
+          </h4>
+          <p className="animate-on-scroll poppins-thin">Scroll for more</p>
+        </div>
       </div>
 
-      <main>
-        {/* Page banner */}
+      {/* Page logo with parallax */}
+      <div className="page-banner  snap-scroll">
+        <img
+          src={darkMode ? page_dark : page_light}
+          loading="lazy"
+          alt="Logo"
+          className="animate-on-scroll"
+        />
+      </div>
 
-        {/* Intro Part */}
-        <div className="intro  snap-scroll">
-          <div className="page-card-wide instrument-serif-regular">
-            <h4 className="animate-on-scroll extra-padding">
-              <span className="instrument-serif-regular-italic text-highlight">Diego Brandjes</span> — a Travel Photographer with a passion for video editing. I
-              capture the world through my lens and enjoy creating compelling stories
-              with my visuals.
-              <br>
-              </br>
-              <span className="instrument-serif-regular-italic">Enjoy my portfolio.</span>
-            </h4>
-            <p className="animate-on-scroll poppins-thin">Scroll for more</p>
-          </div>
-        </div>
+      <section className="parallax animate-on-scroll">
+        <PathDrawing darkMode={darkMode} country={selectedCountry} />
+      </section>
 
-        
-        {/* First background parallax */}
-        <div className="page-banner  snap-scroll">
-          <img
-            src={page}
-            loading="lazy"
-            alt="Logo"
-            className="animate-on-scroll"
-          />
-        </div>
+      {/* Country List */}
+      <section className="chapter-banner animate-on-scroll poppins-thin">
+        {data.countries.map((country, i) => (
+          <React.Fragment key={i}>
+            <button
+              className={`grey ${darkMode ? 'dark' : 'light'}`}
+              style={{
+                cursor: 'pointer',
+                border: 'none',
+                font: 'inherit',
+              }}
+              onClick={() => setSelectedCountry(country.country.toLowerCase())}
+            >
+              <p>{country.country}</p>
+            </button>
+            {i < data.countries.length - 1 && <p className={`grey ${darkMode ? 'dark' : 'light'}`}>|</p>}
+          </React.Fragment>
+        ))}
+      </section>
 
-        <section className="parallax animate-on-scroll">
-                  <PathDrawing/>
-        </section>
+      {/* Country Content */}
+      <div className="country-section">
+        {data.countries
+          .filter((c) => c.country.toLowerCase() === selectedCountry)
+          .map((country) =>
+            country.chapters.map((item, index) => (
+              <React.Fragment key={index}>
+                <div className="chapter snap-scroll">
+                  <div className="page-card-small animate-on-scroll instrument-serif-regular page-card-text">
+                    <h1 className="poppins-bold">{item.chapter}</h1>
+                    <p>{item.paragraphs && item.paragraphs.length > 0 ? item.paragraphs[0] : ''}</p>
+                    <a className={`grey ${darkMode ? 'dark' : 'light'}`} href={item.link}>
+                      <p>See more →</p>
+                    </a>
+                  </div>
 
-        <section className="chapter-banner animate-on-scroll poppins-thin">
-          <a className="grey" href="/home"><p>Italy</p></a>
-          <p className='grey'>|</p>
-          <a className="grey" href="/home"><p>Japan</p></a>
-          <p className='grey'>|</p>
-          <a className="grey" href="/home"><p>France</p></a>
-        </section>
+                  <div className="page-card-small animate-on-scroll">
+                    <a href={item.link}>
+                      <img src={item.image || 'default-image.png'} alt={item.chapter} />
+                    </a>
+                  </div>
+                  <div className="chapter-fill"></div>
+                </div>
+              </React.Fragment>
+            ))
+          )}
+      </div>
 
-        {data.chapters.map((item, index) => (
-          <React.Fragment key={index}>
-          {/* <section
-            style={{
-              '--bg-image': `url(${item.banner || 'default-image.png'})`,
-              } as React.CSSProperties} // Cast style to React.CSSProperties
-              ></section> */}
-
-          <div className="chapter snap-scroll">
-            <div className="page-card-small animate-on-scroll instrument-serif-regular page-card-text">
-              <h1 className="poppins-bold">{item.chapter}</h1>
-              <p>{item.paragraphs && item.paragraphs.length > 0 ? item.paragraphs[0] : ''}</p>
-              <a className="grey" href={item.link}>
-                <p>See more →</p>
-              </a>
-            </div>
-
-            <div className="page-card-small animate-on-scroll">
-              <a href={item.link}>
-                <img src={item.image || 'default-image.png'} alt={item.chapter} />
-              </a>
-            </div>
-              <div className='chapter-fill'></div>
-          </div>
-        </React.Fragment>
-      ))}
-
-
-        {/* About Page */}
-        <div className="chapter snap-scroll">
+      {/* About Page */}
+      <div className="chapter snap-scroll">
         <div className="page-card-tiny animate-on-scroll instrument-serif-regular">
-              <h1 className="poppins-bold">About Me</h1>
-            </div>
-            <div className="page-card-tiny"></div>
-            <div className="page-card-tiny instrument-serif-regular">
-              <p>
-              I'm Diego, a 25-year-old Dutch guy who loves to explore and travel around, taking things one step at a time. Whether its getting lost in a new city, trying dishes I can't pronounce, or just soaking in the local vibe, I'm all about the little moments that make a trip unforgettable. I'm not in a rush—just out here collecting stories, meeting people, and seeing where the road leads.              
-              </p>
-            </div>
-            <div className="page-card-tiny poppins-thin extra-padding">
-              <ul>
-                <li><h3>Fujifilm XT30II</h3></li>
-                <li><h3>26.1MP</h3></li>
-                <li><h3>X-Trans CMOS 4</h3></li>
-                <li><h3>6240x4160</h3></li>
-                <li><h3>Aspect Ratio 3:2</h3></li>
-                <li><h3>-</h3></li>
-                <li><a href="mailto:diegobrandjes@hotmail.com"><h3>Contact</h3></a></li>
-                <li><h3>-</h3></li>
-                <li><h3>© 2025</h3></li>
-              </ul>
-            </div>
-          </div>
-          <div className="chapter snap-scroll"></div>
-          </main>
-    </body>
-  );
-};
-
+          <h1 className="poppins-bold">About Me</h1>
+        </div>
+        <div className="page-card-tiny"></div>
+        <div className="page-card-tiny instrument-serif-regular">
+          <p>
+            I'm Diego, a 25-year-old Dutch guy who loves to explore and travel around, taking things one step at a time. Whether its getting lost in a new city, trying dishes I can't pronounce, or just soaking in the local vibe, I'm all about the little moments that make a trip unforgettable. I'm not in a rush—just out here collecting stories, meeting people, and seeing where the road leads.
+          </p>
+        </div>
+        <div className="page-card-tiny poppins-thin extra-padding">
+          <ul>
+            <li><h3>Fujifilm XT30II</h3></li>
+            <li><h3>26.1MP</h3></li>
+            <li><h3>X-Trans CMOS 4</h3></li>
+            <li><h3>6240x4160</h3></li>
+            <li><h3>Aspect Ratio 3:2</h3></li>
+            <li><h3>-</h3></li>
+            <li><a href="mailto:diegobrandjes@hotmail.com"><h3>Contact</h3></a></li>
+            <li><h3>-</h3></li>
+            <li><h3>© 2025</h3></li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+);
+}
 export default Home;

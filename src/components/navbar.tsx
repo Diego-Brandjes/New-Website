@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./navbar.css";
-import logo from "/src/assets/logo_lightmode.svg";
+import logo_light from "/src/assets/logo_lightmode.svg";
+import logo_dark from "/src/assets/logo_darkmode.svg";
 
-const VerticalMenu: React.FC = () => {
+interface VerticalMenuProps {
+  darkMode: boolean;
+  toggleDarkMode: () => void;
+}
+
+const VerticalMenu: React.FC<VerticalMenuProps> = ({ darkMode, toggleDarkMode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -35,29 +41,36 @@ const VerticalMenu: React.FC = () => {
         onClick={toggleMenu}
       >
         <img
-          src={logo}
+          src={darkMode ? logo_dark : logo_light}
           loading="lazy"
           alt="Menu"
           className="vertical-menu-item"
         />
       </button>
-      <nav className='poppins-thin main-nav'>
+
+      {/* Desktop Nav */}
+      <nav className="poppins-thin main-nav">
         <ul>
           <li><a href="/home">Home</a></li>
           <li><a href="/blog">Blog</a></li>
+          <li>
+            <a onClick={toggleDarkMode} className="poppins-thin main-nav">
+              {darkMode ? 'Light' : 'Dark'}
+            </a>
+          </li>
         </ul>
       </nav>
 
-     {/* Full-Screen Pop-up Menu */}
-     <div className={`fullscreen-popup-menu ${isMenuOpen && isMobile ? "open" : ""}`}>
-      <nav className=" poppins-thinpopup">
-        <ul>
-          <li><a href="/home">Home</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a onClick={toggleMenu}>Close</a></li>
-        </ul>
-      </nav>
-    </div>
+      {/* Full-Screen Pop-up Menu (Mobile) */}
+      <div className={`fullscreen-popup-menu ${isMenuOpen && isMobile ? "open" : ""}`}>
+        <nav className="poppins-thin popup-nav">
+          <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a onClick={toggleMenu}>Close</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   );
 };
