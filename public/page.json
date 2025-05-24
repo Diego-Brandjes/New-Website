@@ -6,7 +6,7 @@
     {
       "chapter": "Tokyo",
       "link": "/tokyo",
-      "image": "/ueno.png",
+      "image": "/ueno.jpg",
       "paragraphs": [
         "Returning in late March, I caught the cherry blossoms just as they were falling, adding a gentle beauty to the city. Tokyo quickly felt like home, full of vibrant neighborhoods, unforgettable moments, and a rhythm that keeps you moving."
       ]
@@ -14,7 +14,7 @@
     {
       "chapter": "Yamanashi",
       "link": "/yamanashi",
-      "image": "/yamanashi.png",
+      "image": "/yamanashi.jpg",
       "paragraphs": [
         "Spending the warmer months in Yamanashi is always a joy, especially cycling along Lake Kawaguchiko under the gaze of Mt. Fuji. The peaceful scenery, fresh mountain air, and quiet moments by the water make it a perfect summer escape."
       ]
@@ -38,7 +38,7 @@
     {
       "chapter": "Fukuoka",
       "link": "/fukuoka",
-      "image": "fukuoka_poster.png",
+      "image": "fukuoka.jpg",
       "paragraphs": [
         "Fukuoka is a lively city, its mix of history, modern charm, and delicious food. With parks, ancient temples, and famous ramen, its a perfect place to relax and explore."
       ]
