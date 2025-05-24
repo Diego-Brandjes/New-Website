@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 import PathDrawing from '../components/map.tsx';
 import page_light from "../assets/page_light.svg";
 import page_dark from "../assets/page_dark.svg";
+import { Moon, Sun } from 'lucide-react';
 
 interface Chapter {
   chapter: string;
@@ -136,6 +137,13 @@ return (
           <p className="animate-on-scroll poppins-thin">Scroll for more</p>
         </div>
       </div>
+
+
+    <div className="darkmode-selector">
+      <a onClick={toggleDarkMode} className="poppins-thin main-nav" style={{ cursor: 'pointer' }}>
+        {darkMode ? <Sun size={30} /> : <Moon size={30} />}
+      </a>
+    </div>
 
       {/* Page logo with parallax */}
       <div className="page-banner  snap-scroll">

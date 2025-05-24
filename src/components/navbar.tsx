@@ -53,11 +53,6 @@ const VerticalMenu: React.FC<VerticalMenuProps> = ({ darkMode, toggleDarkMode })
         <ul>
           <li><a href="/home">Home</a></li>
           <li><a href="/blog">Blog</a></li>
-          <li>
-            <a onClick={toggleDarkMode} className="poppins-thin main-nav">
-              {darkMode ? 'Light' : 'Dark'}
-            </a>
-          </li>
         </ul>
       </nav>
 

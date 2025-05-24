@@ -1,12 +1,10 @@
 .animate-on-scroll {
     opacity: 0; /* Start invisible */
-    transform: translateY(70px); /* Start slightly below */
-    transition: transform 2s ease-out, opacity 1.5s ease-out;
+    transition:  opacity 1.5s ease-out;
 }
   
 .animate-on-scroll.in-view {
     opacity: 1; /* Fully visible */
-    transform: translateY(0); /* Original position */
 }
 .animate-on-scroll.font {
     font-size: clamp(1.5rem, 4vw, 10rem); /* Min: 1.5rem, Scales with 2.5vw, Max: 3rem */

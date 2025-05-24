@@ -1,5 +1,5 @@
 :root {
-  line-height: 1.5;
+  line-height: 1;
   --primary: #ffffff;
   --secondary: #000000;
   --red-font-color: #F94C35;
@@ -40,9 +40,9 @@ section {
 }
 
 /* Uncomment to add snap scroll */
-/* .snap-scroll {
+.snap-scroll {
   scroll-snap-align: start; /* Snaps to the start of each chapter */
-/*} */
+}
 
 .light {
   background-color: var(--primary);
@@ -166,6 +166,13 @@ p {
 }
 
 
+.darkmode-selector {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5vh;
+}
+
 
 /* Content css */
 .chapter {
@@ -178,6 +185,8 @@ p {
 
 .page-card-small {
   flex: 1 1 45%; /* Set the width to 45% for both text and image */
+  padding-top: 5vh;
+  height: 90vh;
 }
 .page-card-tiny {
   flex: 1 1 40%; /* Set the width to 45% for both text and image */
@@ -185,7 +194,6 @@ p {
 
 .page-card-text {
   line-height: 100%;
-  height: 100vh;
 }
 
 .page-card-small img {
