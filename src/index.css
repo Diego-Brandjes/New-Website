@@ -173,8 +173,6 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(1rem, 2vw, 2.5rem); /* Responsive size */
-
 }
 
 .darkmode-selector svg {
@@ -182,33 +180,19 @@ p {
   height: 1em;
 }
 
-.back-to-top {
-  position: fixed;
-  bottom: 25px;
-  right: 2vw;
-  padding: 5vh;
-
-  background: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  opacity: 1;
-  z-index: 1000;
-  display: flex;
-}
-
-.back-to-top svg {
-  display: block;
-  stroke: currentColor; /* Use text color */
-}
-
 /* Content css */
 .chapter {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping when needed */
-  gap: 50px; /* Space between elements */
+  flex-direction: row; 
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;      
+  gap: 50px;
   padding-left: 12vw;
   padding-right: 12vw;
+  scroll-snap-align: start;
+  box-sizing: border-box;
 }
 
 .page-card-small {
@@ -246,7 +230,6 @@ p {
   font-size: 2vw;
 }
 
-
 .page-card-small img {
   aspect-ratio: 0.76/1;
   border-radius: 10px;
@@ -262,8 +245,6 @@ p {
   line-height: 150%;
   margin-top: -2vw;
 }
-
-
 
 /* NotFound page css */
 .notfound-page {
@@ -296,7 +277,6 @@ p {
   bottom: 0;
   left: 0;
   margin-left: 2vw;
-  margin-top: 5px;
   padding: 0;
   z-index: 3;
   }
@@ -347,13 +327,9 @@ p {
     padding: 0;
   }
 
-   
-   .chapter-banner::after {
+  .chapter-banner::after {
      height: 40vh;
    }
-   .chapter {
-    flex-direction: column; /* Stack text and image vertically */
-  }
 
   .page-card-small {
     flex: 1 1 100%; /* Take full width on small screens */
@@ -363,6 +339,16 @@ p {
   }
   .snap-scroll {
     scroll-snap-align: unset; /* Completely removes snapping for this element */
-    }
+  }
+
+  .darkmode-selector {
+    top: 20px;
+    right: 2vw;
+  }
+
+  .darkmode-selector svg {
+    width: 2em;
+    height: 1.5em;
+  }
 }
 

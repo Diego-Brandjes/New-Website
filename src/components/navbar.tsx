@@ -26,6 +26,14 @@ const VerticalMenu: React.FC<VerticalMenuProps> = ({ darkMode }) => {
     };
   }, []);
 
+  useEffect(() => {
+    if (isMenuOpen && isMobile) {
+      document.body.classList.add("menu-open");
+    } else {
+      document.body.classList.remove("menu-open");
+    }
+  }, [isMenuOpen, isMobile]);
+
   const toggleMenu = () => {
     if (isMobile) {
       setIsMenuOpen(!isMenuOpen);
@@ -57,8 +65,7 @@ const VerticalMenu: React.FC<VerticalMenuProps> = ({ darkMode }) => {
       </nav>
 
       {/* Full-Screen Pop-up Menu (Mobile) */}
-      <div className={`fullscreen-popup-menu ${isMenuOpen && isMobile ? "open" : ""}`}>
-        <nav className="poppins-thin popup-nav">
+      <div className={`fullscreen-popup-menu ${isMenuOpen && isMobile ? "open" : ""} ${darkMode ? "dark" : "light"}`}>        <nav className="poppins-thin popup-nav">
           <ul>
             <li><a href="/home">Home</a></li>
             <li><a href="/blog">Blog</a></li>

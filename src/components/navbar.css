@@ -60,7 +60,39 @@ li a::after {
   color: var(--red-font-color);
 }
 
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 2vw;
 
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  opacity: 1;
+  z-index: 2;
+  display: flex;
+  font-size: clamp(1rem, 1vw, 2.5rem); /* Responsive size */
+
+}
+
+.menu-open .back-to-top {
+  display: none !important;
+}
+
+.darkmode-selector a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1rem, 2vw, 2.5rem); /* Responsive size */
+}
+
+.back-to-top svg {
+  display: block;
+  stroke: currentColor; /* Use text color */
+  width: 2em;
+  height: 2em;
+}
 
 @media screen and (max-width: 1200px) {
   /* Hide the main navigation */
@@ -87,7 +119,6 @@ li a::after {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: var(--primary);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -128,9 +159,7 @@ li a::after {
 
 .fullscreen-popup-menu nav a {
   text-decoration: none;
-  color: var(--dark-font-color);
   font-size: 6vh; /* Adjust font size as necessary */
-  font-family: 'Poppins', sans-serif;
   position: relative;
   padding-bottom: 5px; /* Space for the underline */
   transition: color 0.3s ease; /* Smooth color transition */
