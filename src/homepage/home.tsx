@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import VerticalMenu from '../components/navbar.tsx';
 import { Analytics } from "@vercel/analytics/react";
 import PathDrawing from '../components/map.tsx';
-import page_light from "/src/assets/page_light.svg";
-import page_dark from "/src/assets/page_dark.svg";
+import page_light from "../assets/page_light.svg";
+import page_dark from "../assets/page_dark.svg";
 
 interface Chapter {
   chapter: string;
@@ -28,7 +28,9 @@ const Home: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [darkMode, setDarkMode] = useState(false);
   const navigate = useNavigate();
-  const [selectedCountry, setSelectedCountry] = useState<string>('japan');
+  const [selectedCountry, setSelectedCountry] = useState<string>(() => {
+    return localStorage.getItem('selectedCountry') || 'japan';
+  });  
   const toggleDarkMode = () => {
     setDarkMode(prev => !prev);
   };
@@ -37,11 +39,19 @@ const Home: React.FC = () => {
   useEffect(() => {
     const saved = localStorage.getItem('darkMode');
     if (saved === 'true') setDarkMode(true);
+
+    const savedCountry = localStorage.getItem('selectedCountry');
+    if (savedCountry) setSelectedCountry(savedCountry);
   }, []);
 
   useEffect(() => {
     localStorage.setItem('darkMode', darkMode.toString());
   }, [darkMode]);
+
+  // Persist selected country
+  useEffect(() => {
+    localStorage.setItem('selectedCountry', selectedCountry);
+  }, [selectedCountry]);
 
   // Fetch data
   useEffect(() => {
