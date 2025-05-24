@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 import PathDrawing from '../components/map.tsx';
 import page_light from "../assets/page_light.svg";
 import page_dark from "../assets/page_dark.svg";
-import { Moon, Sun } from 'lucide-react';
+import { Moon, Sun, ArrowUp  } from 'lucide-react';
 
 interface Chapter {
   chapter: string;
@@ -31,7 +31,15 @@ const Home: React.FC = () => {
   const navigate = useNavigate();
   const [selectedCountry, setSelectedCountry] = useState<string>(() => {
     return localStorage.getItem('selectedCountry') || 'japan';
-  });  
+  });
+  
+const scrollToTop = () => {
+  const main = document.querySelector('main');
+  if (main) {
+    main.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+};
+
   const toggleDarkMode = () => {
     setDarkMode(prev => !prev);
   };
@@ -75,7 +83,7 @@ const Home: React.FC = () => {
     fetchData();
   }, [navigate]);
 
-  // Setup scroll animations after data is loaded
+  // Setup scroll animations after data is loaded and selectedCountry changes
   useEffect(() => {
     if (!loading) {
       const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
@@ -98,7 +106,7 @@ const Home: React.FC = () => {
       // Cleanup observer on component unmount
       return () => observer.disconnect();
     }
-  }, [loading]); // Run when loading is set to false
+  }, [loading, selectedCountry]); // Depend on selectedCountry
 
   // If data is not loaded, show loading screen
   if (loading) {
@@ -114,7 +122,7 @@ const Home: React.FC = () => {
 
   // Main body
 return (
-  <body className={darkMode ? 'dark' : 'light'}>
+  <div className={darkMode ? 'dark' : 'light'}>
     {/*  VERCEL MODULES */}
     <Analytics />
 
@@ -234,8 +242,18 @@ return (
           </ul>
         </div>
       </div>
+
+
     </main>
-  </body>
+      {/* Back to Top Button */}
+      <button
+        onClick={scrollToTop}
+        className={`back-to-top ${darkMode ? 'dark' : 'light'}`}
+        aria-label="Back to Top"
+      >
+        <ArrowUp strokeWidth={0.75} size={30} />
+      </button>
+  </div>
 );
 }
 export default Home;
