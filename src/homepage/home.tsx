@@ -134,7 +134,7 @@ return (
             <br />
             <span className="instrument-serif-regular-italic">Enjoy my portfolio.</span>
           </h4>
-          <p className="animate-on-scroll poppins-thin">Scroll for more</p>
+          <p className="animate-on-scroll poppins-thin"><br></br><br></br><br></br><br></br>Scroll for more</p>
         </div>
       </div>
 
