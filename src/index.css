@@ -1,7 +1,7 @@
 :root {
   line-height: 1.5;
   --primary: #ffffff;
-  --secondary: #1f1f1f;
+  --secondary: #000000;
   --red-font-color: #F94C35;
   --dark-font-color: #000000;
   --yellowish: #FFC107;
@@ -44,6 +44,17 @@ section {
   scroll-snap-align: start; /* Snaps to the start of each chapter */
 /*} */
 
+.light {
+  background-color: var(--primary);
+  color: var(--dark-font-color);
+}
+
+.dark {
+  background-color: var(--secondary);
+  color: var(--primary);
+  
+
+}
 
 .parallax::after {
   content: " ";
@@ -123,7 +134,6 @@ p {
   text-decoration: none; /* Ensures underline is removed on hover as well */
   padding-right: 10px;
   padding-left: 10px;
-  color: var(--dark-font-color);
 }
 .grey:hover p{
   position: relative;
@@ -135,7 +145,6 @@ p {
 .intro {
   height: 100vh;
   padding: 5vw;
-  background-color: var(--primary);
   /* color: var(--dark-font-color); */
   z-index: 2;
   flex-wrap: wrap;
@@ -165,7 +174,6 @@ p {
   gap: 50px; /* Space between elements */
   padding-left: 12vw;
   padding-right: 12vw;
-  background-color: var(--primary);
 }
 
 .page-card-small {
@@ -229,7 +237,6 @@ p {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: var(--primary);
   flex-direction: column; /* Stack Drag and Content vertically */
 }
 .drag-container {
