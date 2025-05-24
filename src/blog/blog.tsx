@@ -15,7 +15,21 @@ interface PageData {
 const Blog: React.FC = () => {
   const [data, setData] = useState<PageData | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
+  const [darkMode, setDarkMode] = useState(false); // ✅ Add this line
   const navigate = useNavigate();
+
+  const toggleDarkMode = () => {
+    setDarkMode(prev => !prev);
+  };
+
+  useEffect(() => {
+    const saved = localStorage.getItem('darkMode');
+    if (saved === 'true') setDarkMode(true);
+  }, []); // ✅ Fixed dependency array
+
+  useEffect(() => {
+    localStorage.setItem('darkMode', darkMode.toString());
+  }, [darkMode]);
 
   // Fetch data
   useEffect(() => {
@@ -79,14 +93,15 @@ const Blog: React.FC = () => {
 
   // Main body
   return (
-    <body className="body">
+  <body className={darkMode ? 'dark' : 'light'}>
 
     {/* Load menu */}
       <div className="menu-container ">
-        <VerticalMenu />
+        <VerticalMenu darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       </div>
 
       <main>
+        <div className="chapter chapter-fill"></div>
         {data.posts.map((item, index) => (
           <React.Fragment key={index}>
             <div className="chapter snap-scroll">
