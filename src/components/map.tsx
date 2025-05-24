@@ -61,7 +61,7 @@ return (
     animate={controls}
     style={{
       width: "80vw",         // Fill container width
-      height: "80vh",        // Maintain aspect ratio
+      height: "75vh",        // Maintain aspect ratio
     }}
   >
     {countryPaths[country]?.map((d, i) => (

@@ -160,7 +160,7 @@ return (
         </div>
       </section>
 
-      <section className="chapter-banner animate-on-scroll poppins-thin snap-scroll">
+      <section className="chapter-banner animate-on-scroll poppins-thin">
         {data.countries.map((country, i) => (
           <React.Fragment key={i}>
             <button
