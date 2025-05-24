@@ -132,9 +132,8 @@ return (
             capture the world through my lens and enjoy creating compelling stories
             with my visuals.
             <br />
-            <span className="instrument-serif-regular-italic">Enjoy my portfolio.</span>
           </h4>
-          <p className="animate-on-scroll poppins-thin"><br></br><br></br><br></br><br></br>Scroll for more</p>
+          <p className="animate-on-scroll poppins-thin">Scroll for more</p>
         </div>
       </div>
 
@@ -145,7 +144,8 @@ return (
       </a>
     </div>
 
-      {/* Page logo with parallax */}
+      {/* Page logo */}
+      <section className="animate-on-scroll">
       <div className="page-banner  snap-scroll">
         <img
           src={darkMode ? page_dark : page_light}
@@ -154,14 +154,13 @@ return (
           className="animate-on-scroll"
         />
       </div>
-
-      <section className="parallax animate-on-scroll">
         {/* Key changes when selectedCountry changes */}
-        <PathDrawing key={selectedCountry} darkMode={darkMode} country={selectedCountry} />
+        <div className='paralax'>
+          <PathDrawing key={selectedCountry} darkMode={darkMode} country={selectedCountry} />
+        </div>
       </section>
 
-      {/* Country List */}
-      <section className="chapter-banner animate-on-scroll poppins-thin">
+      <section className="chapter-banner animate-on-scroll poppins-thin snap-scroll">
         {data.countries.map((country, i) => (
           <React.Fragment key={i}>
             <button

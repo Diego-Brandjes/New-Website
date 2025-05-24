@@ -80,7 +80,7 @@ section {
   width: 10vw;
 }
 .chapter-banner {
- height: 60vh;
+ height: 10vh;
 }
 
 .chapter-banner::after {
@@ -94,7 +94,7 @@ section {
 
 /* HomePage Banner */
 .page-banner {
-  height: 100vh;
+  height: 80vh;
   width: 100vw;
   display: flex;
   position: absolute;
@@ -186,7 +186,7 @@ p {
 .page-card-small {
   flex: 1 1 45%; /* Set the width to 45% for both text and image */
   padding-top: 5vh;
-  height: 90vh;
+  height: 80vh;
 }
 .page-card-tiny {
   flex: 1 1 40%; /* Set the width to 45% for both text and image */

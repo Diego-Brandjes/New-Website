@@ -56,8 +56,8 @@ export default function PathDrawing({ darkMode, country }: PathDrawingProps) {
 return (
   <motion.svg
     ref={ref}
-    width="800"
-    height="800"
+    width="700"
+    height="700"
     viewBox="0 0 238 260"
     initial="hidden"
     animate={controls}
