@@ -148,7 +148,8 @@ return (
       </div>
 
       <section className="parallax animate-on-scroll">
-        <PathDrawing darkMode={darkMode} country={selectedCountry} />
+        {/* Key changes when selectedCountry changes */}
+        <PathDrawing key={selectedCountry} darkMode={darkMode} country={selectedCountry} />
       </section>
 
       {/* Country List */}
@@ -166,7 +167,9 @@ return (
             >
               <p>{country.country}</p>
             </button>
-            {i < data.countries.length - 1 && <p className={`grey ${darkMode ? 'dark' : 'light'}`}>|</p>}
+            {i < data.countries.length - 1 && (
+              <p className={`grey ${darkMode ? 'dark' : 'light'}`}>|</p>
+            )}
           </React.Fragment>
         ))}
       </section>
