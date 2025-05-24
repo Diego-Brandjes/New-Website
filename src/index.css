@@ -202,8 +202,7 @@ p {
 
 .page-card-small {
   flex: 1 1 45%; /* Set the width to 45% for both text and image */
-  padding-top: 5vh;
-  height: 80vh;
+  height: fit-content;
 }
 .page-card-tiny {
   flex: 1 1 40%; /* Set the width to 45% for both text and image */

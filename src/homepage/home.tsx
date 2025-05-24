@@ -188,6 +188,8 @@ return (
           </React.Fragment>
         ))}
       </section>
+      
+      <div className="chapter-fill"></div>
 
       {/* Country Content */}
       <div className="country-section">
@@ -197,6 +199,11 @@ return (
             country.chapters.map((item, index) => (
               <React.Fragment key={index}>
                 <div className="chapter snap-scroll">
+                  <div className="page-card-small animate-on-scroll">
+                    <a href={item.link}>
+                      <img src={item.image || 'default-image.png'} alt={item.chapter} />
+                    </a>
+                  </div>
                   <div className="page-card-small animate-on-scroll instrument-serif-regular page-card-text">
                     <h1 className="poppins-bold">{item.chapter}</h1>
                     <p>{item.paragraphs && item.paragraphs.length > 0 ? item.paragraphs[0] : ''}</p>
@@ -205,12 +212,6 @@ return (
                     </a>
                   </div>
 
-                  <div className="page-card-small animate-on-scroll">
-                    <a href={item.link}>
-                      <img src={item.image || 'default-image.png'} alt={item.chapter} />
-                    </a>
-                  </div>
-                  <div className="chapter-fill"></div>
                 </div>
               </React.Fragment>
             ))
