@@ -29,7 +29,7 @@ const draw = {
     fill: "rgba(0, 0, 0, 0)" // transparent fill initially
   },
   visible: (i: number) => {
-    const delay = i * 0.5 + 1;
+    const delay = i * 0.9;
     return {
       pathLength: 1,
       opacity: 1,
