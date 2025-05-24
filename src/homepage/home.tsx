@@ -140,7 +140,7 @@ return (
 
     <div className="darkmode-selector">
       <a onClick={toggleDarkMode} className="poppins-thin" style={{ cursor: 'pointer' }}>
-        {darkMode ? <Sun size={30} /> : <Moon size={30} />}
+        {darkMode ? <Sun strokeWidth={0.75} size={30} /> : <Moon strokeWidth={0.75} size={30} />}
       </a>
     </div>
 

@@ -31,7 +31,7 @@ main {
 section {
   transform-style: preserve-3d;
   position: relative;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -172,7 +172,18 @@ p {
   right: 0;
   padding: 5vh;
 }
+.darkmode-selector a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1rem, 2vw, 2.5rem); /* Responsive size */
 
+}
+
+.darkmode-selector svg {
+  width: 1em;
+  height: 1em;
+}
 
 /* Content css */
 .chapter {
@@ -272,6 +283,13 @@ p {
   padding: 0;
   z-index: 3;
   }
+  .page-banner {
+    height: 20vh;
+  }
+
+  .chapter-banner {
+    height: 10vh;
+  }
 }
 /* Media Query for smaller screens */
 @media screen and (max-width: 768px) {
@@ -311,9 +329,7 @@ p {
     font-size: 5vw;
     padding: 0;
   }
-  .chapter-banner {
-    height: 40vh;
-   }
+
    
    .chapter-banner::after {
      height: 40vh;

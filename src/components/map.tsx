@@ -56,12 +56,13 @@ export default function PathDrawing({ darkMode, country }: PathDrawingProps) {
 return (
   <motion.svg
     ref={ref}
-    width="700"
-    height="700"
-    viewBox="0 0 238 260"
+    viewBox="0 0 238 260"   // Defines internal coordinates
     initial="hidden"
     animate={controls}
-    style={{ maxWidth: "80vw" }}
+    style={{
+      width: "80vw",         // Fill container width
+      height: "80vh",        // Maintain aspect ratio
+    }}
   >
     {countryPaths[country]?.map((d, i) => (
       <motion.path
