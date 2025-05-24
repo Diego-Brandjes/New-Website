@@ -8,7 +8,7 @@ interface VerticalMenuProps {
   toggleDarkMode: () => void;
 }
 
-const VerticalMenu: React.FC<VerticalMenuProps> = ({ darkMode, toggleDarkMode }) => {
+const VerticalMenu: React.FC<VerticalMenuProps> = ({ darkMode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
