@@ -57,7 +57,7 @@ li a::after {
 
 .main-nav li:hover a {
   position: relative;
-  color: var(--red-font-color);
+  color: var(--grey-font-color);
 }
 
 .back-to-top {
@@ -92,6 +92,9 @@ li a::after {
   stroke: currentColor; /* Use text color */
   width: 2em;
   height: 2em;
+}
+.back-to-top svg:hover {
+  color: var(--grey-font-color);
 }
 
 @media screen and (max-width: 1200px) {
@@ -169,7 +172,7 @@ li a::after {
   content: ''; /* The line */
   position: absolute;
   bottom: 0;
-  background-color: var(--red-font-color);
+  background-color: var(--grey-font-color);
 
   left: 0;
   width: 0; /* Initially hidden */

@@ -5,6 +5,7 @@
   --red-font-color: #F94C35;
   --dark-font-color: #000000;
   --yellowish: #FFC107;
+  --grey-font-color: #818181;
 }
 
 html, body {
@@ -126,7 +127,7 @@ p {
 }
 .page-card-text li:hover a {
   position: relative;
-  color: var(--red-font-color);
+  color: var(--grey-font-color);
 }
 .grey {
   text-decoration: none; /* Ensures underline is removed on hover as well */
@@ -135,7 +136,7 @@ p {
 }
 .grey:hover p{
   position: relative;
-  color: var(--red-font-color);
+  color: var(--grey-font-color);
 }
 
 /* HomePage css */
@@ -178,6 +179,10 @@ p {
 .darkmode-selector svg {
   width: 1em;
   height: 1em;
+}
+
+.darkmode-selector svg:hover {
+  color: var(--grey-font-color);
 }
 
 /* Content css */
