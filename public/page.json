@@ -20,19 +20,19 @@
       ]
     },
     {
-      "chapter": "Nakasendo",
-      "link": "/nakasendo",
-      "image": "matsumoto.jpg",
-      "paragraphs": [
-        "Hiking the Nakasendo Trail feels like stepping into the past, with scenic post towns and quiet mountain paths that once linked Kyoto and Tokyo. Every stretch of the trail blends history and nature in a way that’s both grounding and inspiring."
-      ]
-    },
-    {
       "chapter": "Osaka",
       "link": "/osaka",
       "image": "osaka.jpg",
       "paragraphs": [
         "Spending Golden Week in Osaka means diving into a city full of flavor and fun. From takoyaki stalls to friendly conversations in Dotonbori, the laid-back vibe and outgoing locals make Osaka a lively contrast to Tokyo’s pace."
+      ]
+    },
+    {
+      "chapter": "Nakasendo",
+      "link": "/nakasendo",
+      "image": "matsumoto.jpg",
+      "paragraphs": [
+        "Hiking the Nakasendo Trail feels like stepping into the past, with scenic post towns and quiet mountain paths that once linked Kyoto and Tokyo. Every stretch of the trail blends history and nature in a way that’s both grounding and inspiring."
       ]
     },
     {
