@@ -56,7 +56,7 @@ export default function PathDrawing({ darkMode, country }: PathDrawingProps) {
 return (
   <motion.svg
     ref={ref}
-    viewBox="0 0 238 260"   // Defines internal coordinates
+    viewBox="0 0 250 260"   // Defines internal coordinates
     initial="hidden"
     animate={controls}
     style={{
