@@ -67,7 +67,7 @@
         {
           "chapter": "Paris",
           "link": "/paris",
-          "image": "/paris.png",
+          "image": "/placeholder.jpg",
           "paragraphs": [
             "The charm of Montmartre, river walks by the Seine, and morning espressos in hidden cafés—Paris never disappoints."
           ]
@@ -75,9 +75,9 @@
         {
           "chapter": "Annecy",
           "link": "/annecy",
-          "image": "/annecy.png",
+          "image": "/placeholder.jpg",
           "paragraphs": [
-            "The charm of Montmartre, river walks by the Seine, and morning espressos in hidden cafés—Paris never disappoints."
+            "Soon..."
           ]
         }
       ]
@@ -88,9 +88,9 @@
         {
           "chapter": "Sicily",
           "link": "/sicily",
-          "image": "/messina.png",
+          "image": "/placeholder.jpg",
           "paragraphs": [
-            "The charm of Montmartre, river walks by the Seine, and morning espressos in hidden cafés—Paris never disappoints."
+            "Soon..."
           ]
         }
       ]
