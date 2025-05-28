@@ -47,6 +47,12 @@
     background: var(--red-font-color);
     color: white;
 }
+.text-highlight-yellow{
+    display: inline-block;
+    padding: .1em 0.15em;
+    background: var(--yellowish);
+    color: black;
+}
 
 /* Used on homescreen for text */
 .extra-padding {

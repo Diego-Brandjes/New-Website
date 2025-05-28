@@ -67,12 +67,6 @@ section {
   background-position: center; /* Centers the image */
   z-index: -3; /* Places it behind other content */
 }
-.bg::after {
-  background-image: url("../public/fuji.jpg"); /* Adds the background image */
-  opacity: 99%;
-  background-size: cover; /* Ensures it scales to cover the area */
-  background-position: center; /* Centers the image */
-}
 
 .chapter-fill {
   height: 10vh;
