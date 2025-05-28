@@ -254,15 +254,13 @@ return (
           </p>
         </div>
         <div className="page-card-tiny poppins-thin extra-padding">
-          <ul>
-            <li><h3>Fujifilm XT30II</h3></li>
-            <li><h3>26.1MP</h3></li>
+          <ul className='main-nav'>
+            <li><h3>Fujifilm XT30II 26.1MP</h3></li>
             <li><h3>X-Trans CMOS 4</h3></li>
-            <li><h3>6240x4160</h3></li>
             <li><h3>Aspect Ratio 3:2</h3></li>
+            <li><h3>6240x4160</h3></li>
             <li><h3>-</h3></li>
             <li ><a href="mailto:diegobrandjes@hotmail.com"><h3>Contact</h3></a></li>
-            <li><h3>-</h3></li>
             <li><h3>© 2025</h3></li>
           </ul>
         </div>
