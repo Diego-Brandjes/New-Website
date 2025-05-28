@@ -3,8 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import VerticalMenu from '../components/navbar.tsx';
 import { Analytics } from "@vercel/analytics/react";
 import PathDrawing from '../components/map.tsx';
-import page_light from "../assets/page_light.svg";
-import page_dark from "../assets/page_dark.svg";
+
+import japan_light from '../assets/page_light.svg';
+import japan_dark from '../assets/page_dark.svg';
+import italy_light from '../assets/italy_light.svg';
+import italy_dark from '../assets/italy_dark.svg';
+import france_light from '../assets/france_light.svg';
+import france_dark from '../assets/france_dark.svg';
+
 import { Moon, Sun, ArrowUp  } from 'lucide-react';
 
 interface Chapter {
@@ -135,12 +141,17 @@ return (
       {/* Intro Part */}
       <div className="intro  snap-scroll">
         <div className="page-card-wide instrument-serif-regular">
-          <h4 className="animate-on-scroll">
-            <span className="instrument-serif-regular-italic text-highlight">Diego Brandjes</span> — a Travel Photographer with a passion for video editing. I
-            capture the world through my lens and enjoy creating compelling stories
-            with my visuals.
-            <br />
-          </h4>
+        <h4 className="animate-on-scroll">
+          {selectedCountry.toLowerCase() === 'japan' ? (
+            <span className="instrument-serif-regular-italic text-highlight">Diego Brandjes</span>
+          ) : (
+            <span className="instrument-serif-regular-italic text-highlight-yellow">Diego Brandjes</span>
+          )}
+          — a Travel Photographer with a passion for video editing. I
+          capture the world through my lens and enjoy creating compelling stories
+          with my visuals.
+          <br />
+        </h4>
           <p className="animate-on-scroll poppins-thin">Scroll for more</p>
         </div>
       </div>
@@ -155,12 +166,25 @@ return (
       {/* Page logo */}
       <section className="animate-on-scroll">
       <div className="page-banner  snap-scroll">
-        <img
-          src={darkMode ? page_dark : page_light}
-          loading="lazy"
-          alt="Logo"
-          className="animate-on-scroll"
-        />
+      <img
+        src={
+          (() => {
+            const country = selectedCountry.toLowerCase();
+            const imageMap: Record<string, { light: string; dark: string }> = {
+              japan: { light: japan_light, dark: japan_dark },
+              italy: { light: italy_light, dark: italy_dark },
+              france: { light: france_light, dark: france_dark },
+            };
+
+            const fallback = { light: japan_light, dark: japan_dark };
+            const countryImages = imageMap[country] || fallback;
+            return darkMode ? countryImages.dark : countryImages.light;
+          })()
+        }
+        loading="lazy"
+        alt="Logo"
+        className="animate-on-scroll"
+      />
       </div>
         {/* Key changes when selectedCountry changes */}
         <div className='paralax'>
@@ -201,7 +225,7 @@ return (
                 <div className="chapter snap-scroll">
                   <div className="page-card-small animate-on-scroll">
                     <a href={item.link}>
-                      <img src={item.image || 'default-image.png'} alt={item.chapter} />
+                      <img src={item.image || 'placeholder.jpg'} alt={item.chapter} />
                     </a>
                   </div>
                   <div className="page-card-small animate-on-scroll instrument-serif-regular page-card-text">
