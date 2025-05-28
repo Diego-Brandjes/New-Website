@@ -67,7 +67,7 @@
         {
           "chapter": "Paris",
           "link": "/paris",
-          "image": "/placeholder.jpg",
+          "image": "",
           "paragraphs": [
             "The charm of Montmartre, river walks by the Seine, and morning espressos in hidden cafés—Paris never disappoints."
           ]
@@ -75,7 +75,7 @@
         {
           "chapter": "Annecy",
           "link": "/annecy",
-          "image": "/placeholder.jpg",
+          "image": "",
           "paragraphs": [
             "Soon..."
           ]
@@ -88,7 +88,7 @@
         {
           "chapter": "Sicily",
           "link": "/sicily",
-          "image": "/placeholder.jpg",
+          "image": "",
           "paragraphs": [
             "Soon..."
           ]
