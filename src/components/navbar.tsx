@@ -61,6 +61,7 @@ const VerticalMenu: React.FC<VerticalMenuProps> = ({ darkMode }) => {
       <nav className="poppins-thin main-nav">
         <ul>
           <li><a href="/home">Home</a></li>
+          <li><a href="/shop">Shop</a></li>
           <li><Link smooth to="/home#about-section">About</Link></li>
         </ul>
       </nav>
@@ -70,6 +71,7 @@ const VerticalMenu: React.FC<VerticalMenuProps> = ({ darkMode }) => {
         <nav className="poppins-thin popup-nav">
           <ul>
             <li><a href="/home">Home</a></li>
+            <li><a href="/shop">Shop</a></li>
             <li><a onClick={toggleMenu}>Close</a></li>
           </ul>
         </nav>
