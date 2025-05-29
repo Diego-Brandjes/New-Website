@@ -84,6 +84,10 @@ section {
   background-position: center; /* Centers the image */
 }
 
+.hover li:hover a {
+  position: relative;
+  color: var(--grey-font-color);
+}
 
 /* HomePage Banner */
 .page-banner {

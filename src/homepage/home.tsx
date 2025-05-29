@@ -254,7 +254,7 @@ return (
           </p>
         </div>
         <div className="page-card-tiny poppins-thin extra-padding">
-          <ul>
+          <ul className='hover'>
             <li><h3>Fujifilm XT30II 26.1MP</h3></li>
             <li><h3>X-Trans CMOS 4</h3></li>
             <li><h3>Aspect Ratio 3:2</h3></li>
