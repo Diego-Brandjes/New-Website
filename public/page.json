@@ -1,58 +1,50 @@
 {
   "countries": [
-    {
-      "country": "Japan",
+    { "country": "Japan",
       "chapters": [
-    {
-      "chapter": "Tokyo",
+    { "chapter": "Tokyo",
       "link": "/tokyo",
       "image": "/ueno.jpg",
       "paragraphs": [
         "Returning in late March, I caught the cherry blossoms just as they were falling, adding a gentle beauty to the city. Tokyo quickly felt like home, full of vibrant neighborhoods, unforgettable moments, and a rhythm that keeps you moving."
       ]
     },
-    {
-      "chapter": "Yamanashi",
+    { "chapter": "Yamanashi",
       "link": "/yamanashi",
       "image": "/yamanashi.jpg",
       "paragraphs": [
         "Spending the warmer months in Yamanashi is always a joy, especially cycling along Lake Kawaguchiko under the gaze of Mt. Fuji. The peaceful scenery, fresh mountain air, and quiet moments by the water make it a perfect summer escape."
       ]
     },
-    {
-      "chapter": "Osaka",
+    { "chapter": "Osaka",
       "link": "/osaka",
       "image": "osaka.jpg",
       "paragraphs": [
         "Spending Golden Week in Osaka means diving into a city full of flavor and fun. From takoyaki stalls to friendly conversations in Dotonbori, the laid-back vibe and outgoing locals make Osaka a lively contrast to Tokyo’s pace."
       ]
     },
-    {
-      "chapter": "Nakasendo",
+    { "chapter": "Nakasendo",
       "link": "/nakasendo",
       "image": "nakasendo.jpg",
       "paragraphs": [
         "Hiking the Nakasendo Trail feels like stepping into the past, with scenic post towns and quiet mountain paths that once linked Kyoto and Tokyo. Every stretch of the trail blends history and nature in a way that’s both grounding and inspiring."
       ]
     },
-    {
-      "chapter": "Fukuoka",
+    { "chapter": "Fukuoka",
       "link": "/fukuoka",
       "image": "fukuoka.jpg",
       "paragraphs": [
         "Fukuoka is a lively city, its mix of history, modern charm, and delicious food. With parks, ancient temples, and famous ramen, its a perfect place to relax and explore."
       ]
     },
-    {
-      "chapter": "Hiroshima",
+    { "chapter": "Hiroshima",
       "link": "/hiroshima",
       "image": "hiroshima.jpg",
       "paragraphs": [
         "Hiroshima offers a powerful blend of reflection and renewal, where the Peace Memorial Park and Museum tell a moving story of resilience. The city’s calm rivers, friendly locals, and savory Hiroshima-style okonomiyaki create a warm, memorable atmosphere that stays with you long after you leave."
       ]
     },
-    {
-      "chapter": "Okinawa",
+    { "chapter": "Okinawa",
       "link": "/okinawa",
       "image": "okinawa.jpg",
       "paragraphs": [
@@ -61,20 +53,31 @@
         }
       ]
     },
-    {
-      "country": "France",
+    { "country": "Europe",
       "chapters": [
-        {
-          "chapter": "Paris",
+        { "chapter": "Sicily",
+          "link": "/sicily",
+          "image": "",
+          "paragraphs": [
+            "Soon..."
+          ]
+        },
+        { "chapter": "Budapest",
+          "link": "/budapest",
+          "image": "",
+          "paragraphs": [
+            "Soon..."
+          ]
+        },
+        { "chapter": "Paris",
           "link": "/paris",
           "image": "",
           "paragraphs": [
             "The charm of Montmartre, river walks by the Seine, and morning espressos in hidden cafés—Paris never disappoints."
           ]
         },
-        {
-          "chapter": "Annecy",
-          "link": "/annecy",
+        { "chapter": "Prague",
+          "link": "/prague",
           "image": "",
           "paragraphs": [
             "Soon..."
@@ -82,12 +85,17 @@
         }
       ]
     },
-    {
-      "country": "Italy",
+    { "country": "Africa",
       "chapters": [
-        {
-          "chapter": "Sicily",
-          "link": "/sicily",
+        { "chapter": "Sharm el Sheikh",
+          "link": "/sharm",
+          "image": "",
+          "paragraphs": [
+            "Soon..."
+          ]
+        },
+        { "chapter": "Casa Blanca",
+          "link": "/casablanca",
           "image": "",
           "paragraphs": [
             "Soon..."

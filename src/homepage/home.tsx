@@ -6,10 +6,10 @@ import PathDrawing from '../components/map.tsx';
 
 import japan_light from '../assets/page_light.svg';
 import japan_dark from '../assets/page_dark.svg';
-import italy_light from '../assets/italy_light.svg';
-import italy_dark from '../assets/italy_dark.svg';
-import france_light from '../assets/france_light.svg';
-import france_dark from '../assets/france_dark.svg';
+import europe_dark from '../assets/europe_dark.svg';
+import europe_light from '../assets/europe_light.svg';
+import africa_dark from '../assets/africa_dark.svg';
+import africa_light from '../assets/africa_light.svg';
 
 import { Moon, Sun, ArrowUp  } from 'lucide-react';
 
@@ -142,11 +142,7 @@ return (
       <div className="intro  snap-scroll">
         <div className="page-card-wide instrument-serif-regular">
         <h4 className="animate-on-scroll">
-          {selectedCountry.toLowerCase() === 'japan' ? (
             <span className="instrument-serif-regular-italic text-highlight">Diego Brandjes</span>
-          ) : (
-            <span className="instrument-serif-regular-italic text-highlight-yellow">Diego Brandjes</span>
-          )}
           — a Travel Photographer with a passion for video editing. I
           capture the world through my lens and enjoy creating compelling stories
           with my visuals.
@@ -155,7 +151,6 @@ return (
           <p className="animate-on-scroll poppins-thin">Scroll for more</p>
         </div>
       </div>
-
 
     <div className="darkmode-selector">
       <a onClick={toggleDarkMode} className="poppins-thin" style={{ cursor: 'pointer' }}>
@@ -172,8 +167,8 @@ return (
             const country = selectedCountry.toLowerCase();
             const imageMap: Record<string, { light: string; dark: string }> = {
               japan: { light: japan_light, dark: japan_dark },
-              italy: { light: italy_light, dark: italy_dark },
-              france: { light: france_light, dark: france_dark },
+              africa: { light: africa_light, dark: africa_dark },
+              europe: { light: europe_light, dark: europe_dark },
             };
 
             const fallback = { light: japan_light, dark: japan_dark };

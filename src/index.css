@@ -230,7 +230,7 @@ p {
 }
 
 .page-card-text {
-  line-height: 150%;
+  line-height: 10vh;
   margin-top: -2vw;
 }
 
