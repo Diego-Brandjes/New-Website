@@ -62,22 +62,22 @@
             "Soon..."
           ]
         },
-        { "chapter": "Budapest",
-          "link": "/budapest",
+        { "chapter": "Hungary",
+          "link": "/hungary",
           "image": "",
           "paragraphs": [
             "Soon..."
           ]
         },
-        { "chapter": "Paris",
-          "link": "/paris",
+        { "chapter": "France",
+          "link": "/france",
           "image": "",
           "paragraphs": [
             "The charm of Montmartre, river walks by the Seine, and morning espressos in hidden cafés—Paris never disappoints."
           ]
         },
-        { "chapter": "Prague",
-          "link": "/prague",
+        { "chapter": "Czechia",
+          "link": "/czechia",
           "image": "",
           "paragraphs": [
             "Soon..."
@@ -94,8 +94,8 @@
             "Soon..."
           ]
         },
-        { "chapter": "Casa Blanca",
-          "link": "/casablanca",
+        { "chapter": "Morocco",
+          "link": "/morocco",
           "image": "",
           "paragraphs": [
             "Soon..."

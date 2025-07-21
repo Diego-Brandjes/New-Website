@@ -11,6 +11,7 @@ import "./components/navbar.css"
 // Load pages
 import Home from './homepage/home.tsx'
 import NotFound from './notfound/notfound.tsx'
+import GalleryPage from './gallery/gallery.tsx'
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/home",
     element: <Home />,
+  },
+  {
+  path: "/:chapterSlug",
+  element: <GalleryPage />
   },
   {
     path: "*",  // Catch-all route
