@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import VerticalMenu from '../components/navbar.tsx';
-import { Analytics } from "@vercel/analytics/react";
 import PathDrawing from '../components/map.tsx';
 
 import japan_light from '../assets/page_light.svg';
@@ -129,8 +128,6 @@ const scrollToTop = () => {
   // Main body
 return (
   <div className={darkMode ? 'dark' : 'light'}>
-    {/*  VERCEL MODULES */}
-    <Analytics />
 
     {/* Load menu */}
     <div className="menu-container ">
@@ -245,7 +242,7 @@ return (
         <div className="page-card-tiny"></div>
         <div className="page-card-tiny instrument-serif-regular">
           <p>
-            I'm Diego, a 25-year-old Dutch guy who loves to explore and travel around, taking things one step at a time. Whether its getting lost in a new city, trying dishes I can't pronounce, or just soaking in the local vibe, I'm all about the little moments that make a trip unforgettable. I'm not in a rush—just out here collecting stories, meeting people, and seeing where the road leads.
+            I'm Diego, a 26-year-old Dutch guy who loves to explore and travel around, taking things one step at a time. Whether its getting lost in a new city, trying dishes I can't pronounce, or just soaking in the local vibe, I'm all about the little moments that make a trip unforgettable. I'm not in a rush—just out here collecting stories, meeting people, and seeing where the road leads.
           </p>
         </div>
         <div className="page-card-tiny poppins-thin extra-padding">
