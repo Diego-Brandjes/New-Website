@@ -1,38 +1,26 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import VerticalMenu from '../components/navbar.tsx';
 import { Moon, Sun, ArrowUp  } from 'lucide-react';
 import { useParams } from "react-router-dom";
 
-interface Chapter {
-  chapter: string;
-  link: string;
-  banner: string;
-  image: string;
-  paragraphs: string[];
-}
-
-interface Country {
-  country: string;
-  chapters: Chapter[];
-}
-
-interface PageData {
-  countries: Country[];
-}
-
 const gallery: React.FC = () => {
-  const [data, setData] = useState<PageData | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
   const [darkMode, setDarkMode] = useState(false);
-  const navigate = useNavigate();
-  const [selectedCountry] = useState<string>(() => {
-    return localStorage.getItem('selectedCountry') || 'japan';
-  });
+
 
   const { chapterSlug } = useParams();
   const [imageList, setImageList] = useState<string[]>([]);
   const [description, setDescription] = useState<string>("");
+
+  const placeholderImage = (
+  <div className="placeholder-image">
+    <svg width="100%" height="90vh" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100%" height="100%" fill="#f3f4f6" />
+      <text x="50%" y="50%" textAnchor="middle" fill="#9ca3af" fontSize="18" dy=".3em">
+        No Images Available
+      </text>
+    </svg>
+  </div>
+);
 
   useEffect(() => {
     const loadManifest = async () => {
@@ -71,63 +59,6 @@ const scrollToTop = () => {
     localStorage.setItem('darkMode', darkMode.toString());
   }, [darkMode]);
 
-  // Fetch data
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`/page.json`);
-        if (!response.ok) {
-          throw new Error('Page not found');
-        }
-        const result: PageData = await response.json();
-        setData(result);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-        navigate('/page-not-found');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, [navigate]);
-
-  // Setup scroll animations after data is loaded and selectedCountry changes
-  useEffect(() => {
-    if (!loading) {
-      const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('in-view');
-            } else {
-              entry.target.classList.remove('in-view');
-            }
-          });
-        },
-        { threshold: 0.15 }
-      );
-
-      elementsToAnimate.forEach((element) => observer.observe(element));
-
-      // Cleanup observer on component unmount
-      return () => observer.disconnect();
-    }
-  }, [loading, selectedCountry]); // Depend on selectedCountry
-
-  // If data is not loaded, show loading screen
-  if (loading) {
-    return (
-      <div className="notfound-page"></div>
-    );
-  }
-
-  // If no data found, return null (handled by navigation)
-  if (!data) {
-    return null;
-  }
 
   // Main body
 return (
@@ -156,32 +87,21 @@ return (
     {/* Gallery Images (reusing card layout) */}
     <div className="country-section">
       <div className="chapter snap-scroll">
-        {imageList.map((img, i) => (
-          <div key={i} className="page-card-small animate-on-scroll">
-            <img
-              src={`https://media.diegobrandjes.com/${chapterSlug}/${img}`}
-              alt={`${chapterSlug} ${i}`}
-              loading="lazy"
-            />
-          </div>
-        ))}
+        {imageList.length > 0 ? (
+          imageList.map((img, i) => (
+            <div key={i} className="page-card-small animate-on-scroll">
+              <img
+                src={`https://media.diegobrandjes.com/${chapterSlug}/${img}`}
+                alt={`${chapterSlug} ${i}`}
+                loading="lazy"
+              />
+            </div>
+          ))
+        ) : (
+          placeholderImage
+        )}
       </div>
     </div>
-
-    <div className="gallery-page">
-      <p>{description}</p>
-      <div className="image-grid">
-      {imageList.map((img, i) => (
-        <img
-          key={i}
-          src={`https://<your-r2-domain>/${chapterSlug}/${img}`}
-          alt={`${chapterSlug} ${i}`}
-          loading="lazy"
-        />
-      ))}
-    </div>
-  </div>
-
 
     </main>
       {/* Back to Top Button */}
