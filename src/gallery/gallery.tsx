@@ -10,25 +10,41 @@ const gallery: React.FC = () => {
   const { chapterSlug } = useParams();
   const [imageList, setImageList] = useState<string[]>([]);
   const [description, setDescription] = useState<string>("");
+  const [title, setTitle] = useState<string>("");
 
-  const placeholderImage = (
-  <div className="placeholder-image">
-    <svg width="100%" height="90vh" xmlns="http://www.w3.org/2000/svg">
-      <rect width="100%" height="100%" fill="#f3f4f6" />
-      <text x="50%" y="50%" textAnchor="middle" fill="#9ca3af" fontSize="18" dy=".3em">
-        No Images Available
-      </text>
-    </svg>
-  </div>
-);
+useEffect(() => {
+  if (imageList.length === 0) return; // don't run if no images yet
 
-  useEffect(() => {
-    const loadManifest = async () => {
-      try {
-        const res = await fetch(`https://<your-r2-domain>/${chapterSlug}/manifest.json`);
-        const json = await res.json();
+  const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        } else {
+          entry.target.classList.remove('in-view');
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  elementsToAnimate.forEach((el) => observer.observe(el));
+
+  return () => {
+    observer.disconnect();
+  };
+}, [imageList]);
+useEffect(() => {
+  const loadManifest = async () => {
+    try {
+      const res = await fetch(`https://media.brandjes.me/${chapterSlug}/manifest.json`);
+      const json = await res.json();
+      console.log(json);
         setImageList(json.images);
         setDescription(json.description);
+        setTitle(json.title);
       } catch (err) {
         console.error("Manifest fetch failed", err);
       }
@@ -68,7 +84,6 @@ return (
     <div className="menu-container ">
       <VerticalMenu darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
     </div>
-
     <main>
 
     <div className="darkmode-selector">
@@ -76,32 +91,50 @@ return (
         {darkMode ? <Sun strokeWidth={0.75} size={30} /> : <Moon strokeWidth={0.75} size={30} />}
       </a>
     </div>
-      
-    {/* Gallery Header */}
-    {/* <div className="chapter snap-scroll">
-      <div className="page-card-small animate-on-scroll">
-        <h1 className="poppins-bold">{chapterSlug}</h1>
-      </div>
-    </div> */}
+    
 
-    {/* Gallery Images (reusing card layout) */}
-    <div className="country-section">
+    {/* Gallery Content */}
+    <div className="country-section snap-scroll">
+      {/* First chapter block: first image + text */}
+      {imageList.length >= 0 && (
+        <div className="chapter snap-scroll">
+          <div className="page-card-small animate-on-scroll">
+            <img
+              src={`https://media.brandjes.me/${chapterSlug}/${imageList[0]}`}
+              alt={`${chapterSlug} 0`}
+              loading="lazy"
+              onError={(e) => {
+                e.currentTarget.src = 'placeholder.jpg';
+              }}
+            />
+          </div>
+
+          <div className="page-card-small animate-on-scroll instrument-serif-regular page-card-text">
+            <h1 className="poppins-bold">{title}</h1>
+            <p>{description}</p>
+          </div>
+        </div>
+      )}
+
+      {/* Remaining images side-by-side stacked downwards */}
       <div className="chapter snap-scroll">
-        {imageList.length > 0 ? (
-          imageList.map((img, i) => (
-            <div key={i} className="page-card-small animate-on-scroll">
-              <img
-                src={`https://media.diegobrandjes.com/${chapterSlug}/${img}`}
-                alt={`${chapterSlug} ${i}`}
-                loading="lazy"
-              />
-            </div>
-          ))
-        ) : (
-          placeholderImage
-        )}
+        {imageList.slice(1).map((img, i) => (
+          <div key={i + 1} className="page-card-small animate-on-scroll">
+            <img
+              src={`https://media.brandjes.me/${chapterSlug}/${img}`}
+              alt={`${chapterSlug} ${i + 1}`}
+              loading="lazy"
+              onError={(e) => {
+                e.currentTarget.src = 'placeholder.jpg';
+              }}
+            />
+          </div>
+        ))}
       </div>
     </div>
+
+
+      <div className="chapter-fill"></div>
 
     </main>
       {/* Back to Top Button */}
