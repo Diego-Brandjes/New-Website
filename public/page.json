@@ -4,7 +4,7 @@
       "chapters": [
     { "chapter": "Tokyo",
       "link": "/tokyo",
-      "image": "/ueno.jpg",
+      "image": "/asakusa.jpg",
       "paragraphs": [
         "Returning in late March, I caught the cherry blossoms just as they were falling, adding a gentle beauty to the city. Tokyo quickly felt like home, full of vibrant neighborhoods, unforgettable moments, and a rhythm that keeps you moving."
       ]
@@ -46,7 +46,7 @@
     },
     { "chapter": "Okinawa",
       "link": "/okinawa",
-      "image": "okinawa.jpg",
+      "image": "okinawa.png",
       "paragraphs": [
         "Okinawa is a tropical paradise in southern Japan, known for its stunning beaches, vibrant coral reefs, and rich cultural heritage. With beautiful islands, traditional Ryukyuan castles, and unique cuisine, it’s a perfect place to relax and explore."
           ]
@@ -57,7 +57,7 @@
       "chapters": [
         { "chapter": "Sicily",
           "link": "/sicily",
-          "image": "",
+          "image": "sicily.jpg",
           "paragraphs": [
             "Soon..."
           ]
@@ -71,7 +71,7 @@
         },
         { "chapter": "France",
           "link": "/france",
-          "image": "",
+          "image": "paris.jpg",
           "paragraphs": [
             "The charm of Montmartre, river walks by the Seine, and morning espressos in hidden cafés—Paris never disappoints."
           ]
@@ -89,14 +89,14 @@
       "chapters": [
         { "chapter": "Sharm el Sheikh",
           "link": "/sharm",
-          "image": "",
+          "image": "sharm.jpg",
           "paragraphs": [
             "Soon..."
           ]
         },
         { "chapter": "Morocco",
           "link": "/morocco",
-          "image": "",
+          "image": "morocco.jpg",
           "paragraphs": [
             "Soon..."
           ]
