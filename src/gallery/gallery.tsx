@@ -91,6 +91,7 @@ return (
         {darkMode ? <Sun strokeWidth={0.75} size={30} /> : <Moon strokeWidth={0.75} size={30} />}
       </a>
     </div>
+      <div className="chapter-fill"></div>
     
 
     {/* Gallery Content */}
