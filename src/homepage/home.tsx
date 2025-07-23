@@ -217,7 +217,14 @@ return (
                 <div className="chapter snap-scroll">
                   <div className="page-card-small animate-on-scroll">
                     <a href={item.link}>
-                      <img src={item.image || 'placeholder.jpg'} alt={item.chapter} />
+                      <img
+                        src={item.image}
+                        alt={item.chapter}
+                        onError={(e) => {
+                          e.currentTarget.onerror = null; // prevent infinite loop if placeholder fails too
+                          e.currentTarget.src = 'placeholder.webp';
+                        }}
+                      />
                     </a>
                   </div>
                   <div className="page-card-small animate-on-scroll instrument-serif-regular page-card-text">

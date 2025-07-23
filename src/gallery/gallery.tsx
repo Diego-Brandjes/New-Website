@@ -105,7 +105,7 @@ return (
               alt={`${chapterSlug} 0`}
               loading="lazy"
               onError={(e) => {
-                e.currentTarget.src = 'placeholder.jpg';
+                e.currentTarget.src = 'placeholder.webp';
               }}
             />
           </div>
@@ -126,7 +126,7 @@ return (
               alt={`${chapterSlug} ${i + 1}`}
               loading="lazy"
               onError={(e) => {
-                e.currentTarget.src = 'placeholder.jpg';
+                e.currentTarget.src = 'placeholder.webp';
               }}
             />
           </div>
