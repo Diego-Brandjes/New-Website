@@ -6,7 +6,7 @@
         {
           "chapter": "Tokyo",
           "link": "/tokyo",
-          "image": "/asakusa.jpg",
+          "image": "/asakusa.webp",
           "paragraphs": [
             "Returning in late March, I caught the cherry blossoms just as they were falling, adding a gentle beauty to the city. Tokyo quickly felt like home, full of vibrant neighborhoods, unforgettable moments, and a rhythm that keeps you moving."
           ]
@@ -14,7 +14,7 @@
         {
           "chapter": "Yamanashi",
           "link": "/yamanashi",
-          "image": "/yamanashi.jpg",
+          "image": "/yamanashi.webp",
           "paragraphs": [
             "Spending the warmer months in Yamanashi is always a joy, especially cycling along Lake Kawaguchiko under the gaze of Mt. Fuji. The peaceful scenery, fresh mountain air, and quiet moments by the water make it a perfect summer escape."
           ]
@@ -22,7 +22,7 @@
         {
           "chapter": "Osaka",
           "link": "/osaka",
-          "image": "osaka.jpg",
+          "image": "osaka.webp",
           "paragraphs": [
             "Spending Golden Week in Osaka means diving into a city full of flavor and fun. From takoyaki stalls to friendly conversations in Dotonbori, the laid-back vibe and outgoing locals make Osaka a lively contrast to Tokyo’s pace."
           ]
@@ -30,7 +30,7 @@
         {
           "chapter": "Nakasendo",
           "link": "/nakasendo",
-          "image": "nakasendo.jpg",
+          "image": "nakasendo.webp",
           "paragraphs": [
             "Hiking the Nakasendo Trail feels like stepping into the past, with scenic post towns and quiet mountain paths that once linked Kyoto and Tokyo. Every stretch of the trail blends history and nature in a way that’s both grounding and inspiring."
           ]
@@ -38,7 +38,7 @@
         {
           "chapter": "Fukuoka",
           "link": "/fukuoka",
-          "image": "fukuoka.jpg",
+          "image": "fukuoka.webp",
           "paragraphs": [
             "Fukuoka is a lively city, its mix of history, modern charm, and delicious food. With parks, ancient temples, and famous ramen, its a perfect place to relax and explore."
           ]
@@ -46,7 +46,7 @@
         {
           "chapter": "Hiroshima",
           "link": "/hiroshima",
-          "image": "hiroshima.jpg",
+          "image": "hiroshima.webp",
           "paragraphs": [
             "Hiroshima offers a powerful blend of reflection and renewal, where the Peace Memorial Park and Museum tell a moving story of resilience. The city’s calm rivers, friendly locals, and savory Hiroshima-style okonomiyaki create a warm, memorable atmosphere that stays with you long after you leave."
           ]
@@ -54,7 +54,7 @@
         {
           "chapter": "Okinawa",
           "link": "/okinawa",
-          "image": "okinawa.jpg",
+          "image": "okinawa.webp",
           "paragraphs": [
             "Okinawa is a tropical paradise in southern Japan, known for its stunning beaches, vibrant coral reefs, and rich cultural heritage. With beautiful islands, traditional Ryukyuan castles, and unique cuisine, it’s a perfect place to relax and explore."
           ]
@@ -67,7 +67,7 @@
         {
           "chapter": "Sicily",
           "link": "/sicily",
-          "image": "sicily.jpg",
+          "image": "sicily.webp",
           "paragraphs": [
             "Sicily offers a rich tapestry of history, culture, and cuisine, from ancient ruins to lively markets. Wandering through sun-drenched streets, tasting fresh seafood, and enjoying the island’s volcanic landscapes made this trip unforgettable."
           ]
@@ -83,7 +83,7 @@
         {
           "chapter": "France",
           "link": "/france",
-          "image": "paris.jpg",
+          "image": "paris.webp",
           "paragraphs": [
             "The charm of Montmartre, river walks by the Seine, and morning espressos in hidden cafés—Paris never disappoints."
           ]
@@ -104,7 +104,7 @@
         {
           "chapter": "Sharm el Sheikh",
           "link": "/sharm",
-          "image": "sharm.jpg",
+          "image": "sharm.webp",
           "paragraphs": [
             "Sharm El Sheikh balances vibrant resort life with thrilling desert adventures. Whether riding quadbikes through the sands or diving into crystal-clear waters, the city offers a blend of excitement and relaxation by the Red Sea."
           ]
@@ -112,7 +112,7 @@
         {
           "chapter": "Morocco",
           "link": "/morocco",
-          "image": "morocco.jpg",
+          "image": "morocco.webp",
           "paragraphs": [
             "Morocco’s bustling souks, aromatic spices, and stunning desert landscapes create a sensory feast. Exploring ancient medinas, tasting tagine under starry skies, and wandering colorful markets left an unforgettable impression."
           ]
