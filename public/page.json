@@ -75,7 +75,7 @@
         {
           "chapter": "Hungary",
           "link": "/hungary",
-          "image": "",
+          "image": "budapest.webp",
           "paragraphs": [
             "Hungary’s charm lies in its warm hospitality, stunning architecture, and vibrant thermal baths. Exploring Budapest’s historic districts and sampling local wines left me with a deep appreciation for the country’s rich heritage and lively spirit."
           ]
@@ -91,7 +91,7 @@
         {
           "chapter": "Czechia",
           "link": "/czechia",
-          "image": "",
+          "image": "prague.webp",
           "paragraphs": [
             "Czechia’s cobbled streets and Gothic architecture create a fairy-tale atmosphere. From lively Prague squares to peaceful countryside, the country’s mix of old-world charm and modern culture made every day a delight."
           ]
