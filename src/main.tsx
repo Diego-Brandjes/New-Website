@@ -27,7 +27,7 @@ const router = createBrowserRouter([
   element: <GalleryPage />
   },
   {
-    path: "*",  // Catch-all route
+    path: "/page-not-found",  // Catch-all route
     element: <NotFound />,
   },
 ]);

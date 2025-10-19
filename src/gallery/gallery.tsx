@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import VerticalMenu from '../components/navbar.tsx';
 import { Moon, Sun, ArrowUp  } from 'lucide-react';
 import { useParams } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
+
 
 const gallery: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
-
-
+  const navigate = useNavigate();
   const { chapterSlug } = useParams();
   const [imageList, setImageList] = useState<string[]>([]);
   const [description, setDescription] = useState<string>("");
@@ -40,18 +41,29 @@ useEffect(() => {
   const loadManifest = async () => {
     try {
       const res = await fetch(`https://media.brandjes.me/${chapterSlug}/manifest.json`);
-      const json = await res.json();
-      console.log(json);
-        setImageList(json.images);
-        setDescription(json.description);
-        setTitle(json.title);
-      } catch (err) {
-        console.error("Manifest fetch failed", err);
-      }
-    };
 
-    loadManifest();
-  }, [chapterSlug]);
+      if (!res.ok) {
+        throw new Error(`Manifest not found (${res.status})`);
+      }
+
+      const json = await res.json();
+
+      // Basic validation check — adjust as needed
+      if (!json || !json.images || !Array.isArray(json.images) || json.images.length === 0) {
+        throw new Error("Invalid or empty manifest data");
+      }
+
+      setImageList(json.images);
+      setDescription(json.description || "");
+      setTitle(json.title || "");
+    } catch (err) {
+      console.error("Manifest fetch failed:", err);
+      navigate("/page-not-found"); // Redirect on error
+    }
+  };
+
+  loadManifest();
+}, [chapterSlug, navigate]);
   
 const scrollToTop = () => {
   const main = document.querySelector('main');
