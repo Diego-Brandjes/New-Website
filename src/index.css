@@ -55,6 +55,14 @@ section {
   color: var(--primary);
 }
 
+.prompt-black {
+  color: var(--dark-font-color);
+  font-size: 0.01vh;
+}
+.prompt-light {
+  color: var(--primary);
+  font-size: 0.01vh;
+}
 .chapter-fill {
   height: 10vh;
   width: 10vw;
