@@ -28,7 +28,7 @@ const draw = {
       opacity: 1,
       fill: "rgba(0, 0, 0, 1)", // fully colored after
       transition: {
-        pathLength: { delay, type: "spring", duration: 6.5, bounce: 0 },
+        pathLength: { delay, type: "spring" as const, duration: 6.5, bounce: 0 },
         opacity: { delay, duration: 0.01 },
         fill: { delay: delay + 1.5, duration: 1 } // start filling after drawing
       }
