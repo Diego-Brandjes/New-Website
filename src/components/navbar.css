@@ -31,18 +31,18 @@ ul {
 }
 
 .main-nav li {
-  line-height: 240%;
   position: relative; /* Required for positioning the pseudo-element */
   text-align: left;
+  line-height: 5vh;
 }
 
 li a {
   text-decoration: none;
   color: var(--light-font-color);
-  font-size: 2.5vw;
+  font-size: 2.4vw;
   position: relative; /* Required for pseudo-element positioning */
   font-family: 'poppins', sans-serif; /* Replace with your default font */
-  font-weight: 200;
+  font-weight: 100;
   transition: font-family 0.15s ease-in-out, color 0.15s ease-in-out; /* Smooth transition */
 }
 
