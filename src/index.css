@@ -254,29 +254,9 @@ p {
 }
 
 
-@media screen and (max-width: 1200px) {
-  .darkmode-selector {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  margin-left: 2vw;
-  padding: 0;
-  z-index: 3;
-  }
-  .page-banner {
-    height: 20vh;
-  }
 
-  .page-card-small img {
-    width: 90%;
-  }
-
-  .chapter-banner {
-    height: 10vh;
-  }
-}
 /* Media Query for smaller screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
 
   .page-card-text {
     line-height: 170%;
@@ -285,7 +265,21 @@ p {
   .notfound-content h2{
     font-size: 4vw;
   }
-  
+  .darkmode-selector {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 2vw;
+    padding: 0;
+    z-index: 3;
+  }
+  .page-banner {
+    height: 20vh;
+  }
+
+  .chapter-banner {
+    height: 10vh;
+  }
   h1 {
     font-size: 10vw;
   }
@@ -317,6 +311,9 @@ p {
   .snap-scroll {
     scroll-snap-align: unset; /* Completely removes snapping for this element */
   }
+  .page-card-tiny {
+  flex: 1 1 50%; /* Set the width to 45% for both text and image */
+}
 
   .darkmode-selector {
     top: 20px;

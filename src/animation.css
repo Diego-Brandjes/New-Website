@@ -14,7 +14,7 @@
 }
 
 /* Media Query for smaller screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .animate-on-scroll {
         font-size: clamp(1.5rem, 7vw, 10rem); /* Min: 1.5rem, Scales with 2.5vw, Max: 3rem */
     }
